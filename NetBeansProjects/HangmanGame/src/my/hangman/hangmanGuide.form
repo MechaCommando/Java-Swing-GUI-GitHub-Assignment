@@ -86,7 +86,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Back"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
-        <Property name="actionCommand" type="java.lang.String" value="Back"/>
       </Properties>
       <AccessibilityProperties>
         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Okay"/>
