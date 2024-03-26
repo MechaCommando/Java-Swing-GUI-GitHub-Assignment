@@ -15,14 +15,15 @@ public class mainHangmanUI extends javax.swing.JFrame {
 
     public static String word = "HELLO";
     public static int mistakes = 0;
-    public int wordLength = 5;
-    public static List<String> letters = new ArrayList<>();
+    public static int maxMistakes = 7;
+    //public int wordLength = 5;
+    //public static List<String> letters = new ArrayList<>();
     //mistakeCounterLabel.setText("Mistakes: " + (String)mistakes);
     /**
      * Creates new form mainHangmanUI
      */
     public mainHangmanUI() {
-        this.wordLength = WordLengthSlider.getValue();
+        //this.wordLength = WordLengthSlider.getValue();
         initComponents();
         
     }
@@ -71,9 +72,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
         textField05 = new javax.swing.JTextField();
         textField06 = new javax.swing.JTextField();
         WordLengthSlider = new javax.swing.JSlider();
-        jLabel1 = new javax.swing.JLabel();
+        WordLengthLabel = new javax.swing.JLabel();
         mistakeCounterLabel = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -365,7 +365,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(xButton)
                     .addComponent(yButton)
                     .addComponent(zButton))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -375,21 +375,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
         textField01.setMinimumSize(new java.awt.Dimension(22, 22));
 
         WordLengthSlider.setMaximum(6);
+        WordLengthSlider.setMinimum(3);
         WordLengthSlider.setSnapToTicks(true);
+        WordLengthSlider.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                WordLengthSliderStateChanged(evt);
+            }
+        });
 
-        jLabel1.setText("Word Length: ");
+        WordLengthLabel.setText("Word Length: 6");
 
         mistakeCounterLabel.setText("Mistakes: ");
         mistakeCounterLabel.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentHidden(java.awt.event.ComponentEvent evt) {
                 mistakeCounterLabelComponentHidden(evt);
-            }
-        });
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Yahya\\OneDrive\\Desktop\\hangManIMGSmallerThree.jpg")); // NOI18N
-        jLabel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jLabel2MouseDragged(evt);
             }
         });
 
@@ -403,8 +402,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addGap(45, 45, 45)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(160, 160, 160)
+                                .addGap(235, 235, 235)
                                 .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -423,7 +421,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addComponent(mistakeCounterLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
+                            .addComponent(WordLengthLabel)
                             .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
@@ -432,7 +430,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(WordLengthLabel)
                     .addComponent(mistakeCounterLabel))
                 .addGap(5, 5, 5)
                 .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -443,9 +441,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                    .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(16, 16, 16))
         );
@@ -471,98 +468,258 @@ public class mainHangmanUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("F")){
+            fButton.setBackground(Color.green);
+            System.out.print(word.indexOf("F"));
+            //System.out.print(wordLength);
+        } else {
+            fButton.setBackground(Color.red);
+            mistakes += 1;
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+            
+        }
     }//GEN-LAST:event_fButtonActionPerformed
 
     private void eButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("E")){
+            eButton.setBackground(Color.green);
+            System.out.print(word.indexOf("E"));
+            //System.out.print(wordLength);
+        } else {
+            eButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_eButtonActionPerformed
 
     private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("D")){
+            dButton.setBackground(Color.green);
+            System.out.print(word.indexOf("D"));
+            //System.out.print(wordLength);
+        } else {
+            dButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_dButtonActionPerformed
 
     private void aButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("A")){
+            aButton.setBackground(Color.green);
+            System.out.print(word.indexOf("A"));
+            //System.out.print(wordLength);
+        } else {
+            aButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_aButtonActionPerformed
 
     private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("B")){
+            bButton.setBackground(Color.green);
+            System.out.print(word.indexOf("B"));
+            //System.out.print(wordLength);
+        } else {
+            bButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_bButtonActionPerformed
 
     private void cButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("C")){
+            cButton.setBackground(Color.green);
+            System.out.print(word.indexOf("C"));
+            //System.out.print(wordLength);
+        } else {
+            cButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_cButtonActionPerformed
 
     private void gButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("G")){
+            gButton.setBackground(Color.green);
+            System.out.print(word.indexOf("G"));
+            //System.out.print(wordLength);
+        } else {
+            gButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_gButtonActionPerformed
 
     private void hButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("H")){
+            hButton.setBackground(Color.green);
+            System.out.print(word.indexOf("H"));
+            //System.out.print(wordLength);
+        } else {
+            hButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_hButtonActionPerformed
 
     private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("Q")){
+            qButton.setBackground(Color.green);
+            System.out.print(word.indexOf("Q"));
+            //System.out.print(wordLength);
+        } else {
+            qButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_qButtonActionPerformed
 
     private void rButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("R")){
+            rButton.setBackground(Color.green);
+            System.out.print(word.indexOf("R"));
+            //System.out.print(wordLength);
+        } else {
+            rButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_rButtonActionPerformed
 
     private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("S")){
+            sButton.setBackground(Color.green);
+            System.out.print(word.indexOf("S"));
+            //System.out.print(wordLength);
+        } else {
+            sButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_sButtonActionPerformed
 
     private void tButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("T")){
+            tButton.setBackground(Color.green);
+            System.out.print(word.indexOf("T"));
+            //System.out.print(wordLength);
+        } else {
+            tButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_tButtonActionPerformed
 
     private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("U")){
+            uButton.setBackground(Color.green);
+            System.out.print(word.indexOf("U"));
+            //System.out.print(wordLength);
+        } else {
+            uButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_uButtonActionPerformed
 
     private void vButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("V")){
+            vButton.setBackground(Color.green);
+            System.out.print(word.indexOf("V"));
+            //System.out.print(wordLength);
+        } else {
+            vButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_vButtonActionPerformed
 
     private void wButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("W")){
+            wButton.setBackground(Color.green);
+            System.out.print(word.indexOf("W"));
+            //System.out.print(wordLength);
+        } else {
+            wButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_wButtonActionPerformed
 
     private void xButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("X")){
+            xButton.setBackground(Color.green);
+            System.out.print(word.indexOf("X"));
+            //System.out.print(wordLength);
+        } else {
+            xButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_xButtonActionPerformed
 
     private void iButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("I")){
+            iButton.setBackground(Color.green);
+            System.out.print(word.indexOf("I"));
+            //System.out.print(wordLength);
+        } else {
+            iButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_iButtonActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("J")){
+            jButton.setBackground(Color.green);
+            System.out.print(word.indexOf("J"));
+            //System.out.print(wordLength);
+        } else {
+            jButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_jButtonActionPerformed
 
     private void kButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("K")){
+            kButton.setBackground(Color.green);
+            System.out.print(word.indexOf("K"));
+            //System.out.print(wordLength);
+        } else {
+            kButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_kButtonActionPerformed
 
     private void lButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("L")){
+            lButton.setBackground(Color.green);
+            System.out.print(word.indexOf("L"));
+            //System.out.print(wordLength);
+        } else {
+            lButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_lButtonActionPerformed
 
     private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("M")){
+            mButton.setBackground(Color.green);
+            System.out.print(word.indexOf("M"));
+            //System.out.print(wordLength);
+        } else {
+            mButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_mButtonActionPerformed
 
     private void nButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("N")){
+            nButton.setBackground(Color.green);
+            System.out.print(word.indexOf("N"));
+            //System.out.print(wordLength);
+        } else {
+            nButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_nButtonActionPerformed
 
     private void oButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oButtonActionPerformed
         if (word.contains("O")){
             oButton.setBackground(Color.green);
             System.out.print(word.indexOf("O"));
-            System.out.print(wordLength);
+            //System.out.print(wordLength);
         } else {
             oButton.setBackground(Color.red);
             mistakes += 1;
@@ -570,24 +727,79 @@ public class mainHangmanUI extends javax.swing.JFrame {
     }//GEN-LAST:event_oButtonActionPerformed
 
     private void pButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("P")){
+            pButton.setBackground(Color.green);
+            System.out.print(word.indexOf("P"));
+            //System.out.print(wordLength);
+        } else {
+            pButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_pButtonActionPerformed
 
     private void yButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("Y")){
+            yButton.setBackground(Color.green);
+            System.out.print(word.indexOf("Y"));
+            //System.out.print(wordLength);
+        } else {
+            yButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_yButtonActionPerformed
 
     private void zButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zButtonActionPerformed
-        // TODO add your handling code here:
+        if (word.contains("Z")){
+            zButton.setBackground(Color.green);
+            System.out.print(word.indexOf("Z"));
+            //System.out.print(wordLength);
+        } else {
+            zButton.setBackground(Color.red);
+            mistakes += 1;
+        }
     }//GEN-LAST:event_zButtonActionPerformed
 
     private void mistakeCounterLabelComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_mistakeCounterLabelComponentHidden
         // TODO add your handling code here:
     }//GEN-LAST:event_mistakeCounterLabelComponentHidden
 
-    private void jLabel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseDragged
-        
-    }//GEN-LAST:event_jLabel2MouseDragged
+    private void WordLengthSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_WordLengthSliderStateChanged
+        WordLengthLabel.setText("Word Length: " + String.valueOf(WordLengthSlider.getValue()));
+        switch (WordLengthSlider.getValue()){
+            case 3: 
+                textField01.show();
+                textField02.show();
+                textField03.show();
+                textField04.hide();
+                textField05.hide();
+                textField06.hide();
+                break;
+            case 4: 
+                textField01.show();
+                textField02.show();
+                textField03.show();
+                textField04.show();
+                textField05.hide();
+                textField06.hide();
+                break;
+            case 5: 
+                textField01.show();
+                textField02.show();
+                textField03.show();
+                textField04.show();
+                textField05.show();
+                textField06.hide();
+                break;
+            case 6: 
+                textField01.show();
+                textField02.show();
+                textField03.show();
+                textField04.show();
+                textField05.show();
+                textField06.show();
+                break;
+        }
+    }//GEN-LAST:event_WordLengthSliderStateChanged
 
     /**
      * @param args the command line arguments
@@ -620,14 +832,14 @@ public class mainHangmanUI extends javax.swing.JFrame {
         //    letters.add("");
         //}
 
-         if (word == "HELLO"){
-            letters.set(0, "H");
-            letters.set(1, "E");
-            letters.set(2, "L");
-            letters.set(3, "L");
-            letters.set(4, "O");
-            System.out.print(letters);
-        }
+         //if (word == "HELLO"){
+         //   letters.set(0, "H");
+         //   letters.set(1, "E");
+         //   letters.set(2, "L");
+         //   letters.set(3, "L");
+         //   letters.set(4, "O");
+         //   System.out.print(letters);
+        //}
        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -637,6 +849,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel WordLengthLabel;
     private javax.swing.JSlider WordLengthSlider;
     private javax.swing.JButton aButton;
     private javax.swing.JButton bButton;
@@ -648,8 +861,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private javax.swing.JButton hButton;
     private javax.swing.JButton iButton;
     private javax.swing.JButton jButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton kButton;
