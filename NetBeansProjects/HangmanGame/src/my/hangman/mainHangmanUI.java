@@ -328,7 +328,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addComponent(yButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(zButton)))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -368,7 +368,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(xButton)
                     .addComponent(yButton)
                     .addComponent(zButton))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -452,10 +452,11 @@ public class mainHangmanUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(WordLengthLabel)
-                    .addComponent(mistakeCounterLabel)
-                    .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(WordLengthLabel)
+                        .addComponent(mistakeCounterLabel)))
                 .addGap(5, 5, 5)
                 .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -495,8 +496,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
         if (word.contains("F")){
             fButton.setBackground(Color.green);
-            System.out.print(word.indexOf("F"));
-            System.out.print(wordLength);
+            if (word.indexOf("F") == 0 || word.lastIndexOf("F") == 0){
+                textField01.setText("F");
+            } if (word.indexOf("F") == 1 || word.lastIndexOf("F") == 1){
+                textField02.setText("F");
+            } if (word.indexOf("F") == 2 || word.lastIndexOf("F") == 2){
+                textField03.setText("F");
+            } if (word.indexOf("F") == 3 || word.lastIndexOf("F") == 3){
+                textField04.setText("F");
+            } if (word.indexOf("F") == 4 || word.lastIndexOf("F") == 4){
+                textField05.setText("F");
+            } if (word.indexOf("F") == 5 || word.lastIndexOf("F") == 5){
+                textField06.setText("F");
+            }
         } else {
             fButton.setBackground(Color.red);
             mistakes += 1;
@@ -534,8 +546,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
         if (word.contains("D")){
             dButton.setBackground(Color.green);
-            System.out.print(word.indexOf("D"));
-            //System.out.print(wordLength);
+            if (word.indexOf("D") == 0 || word.lastIndexOf("D") == 0){
+                textField01.setText("D");
+            } if (word.indexOf("D") == 1 || word.lastIndexOf("D") == 1){
+                textField02.setText("D");
+            } if (word.indexOf("D") == 2 || word.lastIndexOf("D") == 2){
+                textField03.setText("D");
+            } if (word.indexOf("D") == 3 || word.lastIndexOf("D") == 3){
+                textField04.setText("A");
+            } if (word.indexOf("D") == 4 || word.lastIndexOf("D") == 4){
+                textField05.setText("D");
+            } if (word.indexOf("D") == 5 || word.lastIndexOf("D") == 5){
+                textField06.setText("D");
+            }
         } else {
             dButton.setBackground(Color.red);
             mistakes += 1;
@@ -567,8 +590,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
         if (word.contains("B")){
             bButton.setBackground(Color.green);
-            System.out.print(word.indexOf("B"));
-            
+            if (word.indexOf("B") == 0 || word.lastIndexOf("B") == 0){
+                textField01.setText("B");
+            } if (word.indexOf("B") == 1 || word.lastIndexOf("B") == 1){
+                textField02.setText("B");
+            } if (word.indexOf("B") == 2 || word.lastIndexOf("B") == 2){
+                textField03.setText("B");
+            } if (word.indexOf("B") == 3 || word.lastIndexOf("B") == 3){
+                textField04.setText("B");
+            } if (word.indexOf("B") == 4 || word.lastIndexOf("B") == 4){
+                textField05.setText("B");
+            } if (word.indexOf("B") == 5 || word.lastIndexOf("B") == 5){
+                textField06.setText("B");
+            }
         } else {
             bButton.setBackground(Color.red);
             mistakes += 1;
@@ -600,8 +634,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void gButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButtonActionPerformed
         if (word.contains("G")){
             gButton.setBackground(Color.green);
-            System.out.print(word.indexOf("G"));
-            //System.out.print(wordLength);
+            if (word.indexOf("G") == 0 || word.lastIndexOf("G") == 0){
+                textField01.setText("G");
+            } if (word.indexOf("G") == 1 || word.lastIndexOf("G") == 1){
+                textField02.setText("G");
+            } if (word.indexOf("G") == 2 || word.lastIndexOf("G") == 2){
+                textField03.setText("G");
+            } if (word.indexOf("G") == 3 || word.lastIndexOf("G") == 3){
+                textField04.setText("G");
+            } if (word.indexOf("G") == 4 || word.lastIndexOf("G") == 4){
+                textField05.setText("G");
+            } if (word.indexOf("G") == 5 || word.lastIndexOf("G") == 5){
+                textField06.setText("G");
+            }
         } else {
             gButton.setBackground(Color.red);
             mistakes += 1;
@@ -611,8 +656,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void hButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hButtonActionPerformed
         if (word.contains("H")){
             hButton.setBackground(Color.green);
-            System.out.print(word.indexOf("H"));
-            //System.out.print(wordLength);
+            if (word.indexOf("H") == 0 || word.lastIndexOf("H") == 0){
+                textField01.setText("H");
+            } if (word.indexOf("H") == 1 || word.lastIndexOf("H") == 1){
+                textField02.setText("H");
+            } if (word.indexOf("H") == 2 || word.lastIndexOf("H") == 2){
+                textField03.setText("H");
+            } if (word.indexOf("H") == 3 || word.lastIndexOf("H") == 3){
+                textField04.setText("H");
+            } if (word.indexOf("H") == 4 || word.lastIndexOf("H") == 4){
+                textField05.setText("H");
+            } if (word.indexOf("H") == 5 || word.lastIndexOf("H") == 5){
+                textField06.setText("H");
+            }
         } else {
             hButton.setBackground(Color.red);
             mistakes += 1;
@@ -622,8 +678,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
         if (word.contains("Q")){
             qButton.setBackground(Color.green);
-            System.out.print(word.indexOf("Q"));
-            //System.out.print(wordLength);
+            if (word.indexOf("Q") == 0 || word.lastIndexOf("Q") == 0){
+                textField01.setText("Q");
+            } if (word.indexOf("Q") == 1 || word.lastIndexOf("Q") == 1){
+                textField02.setText("Q");
+            } if (word.indexOf("Q") == 2 || word.lastIndexOf("Q") == 2){
+                textField03.setText("Q");
+            } if (word.indexOf("Q") == 3 || word.lastIndexOf("Q") == 3){
+                textField04.setText("Q");
+            } if (word.indexOf("Q") == 4 || word.lastIndexOf("Q") == 4){
+                textField05.setText("Q");
+            } if (word.indexOf("Q") == 5 || word.lastIndexOf("Q") == 5){
+                textField06.setText("Q");
+            }
         } else {
             qButton.setBackground(Color.red);
             mistakes += 1;
@@ -655,8 +722,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
         if (word.contains("S")){
             sButton.setBackground(Color.green);
-            System.out.print(word.indexOf("S"));
-            //System.out.print(wordLength);
+            if (word.indexOf("S") == 0 || word.lastIndexOf("S") == 0){
+                textField01.setText("S");
+            } if (word.indexOf("S") == 1 || word.lastIndexOf("S") == 1){
+                textField02.setText("S");
+            } if (word.indexOf("S") == 2 || word.lastIndexOf("S") == 2){
+                textField03.setText("S");
+            } if (word.indexOf("S") == 3 || word.lastIndexOf("S") == 3){
+                textField04.setText("S");
+            } if (word.indexOf("S") == 4 || word.lastIndexOf("S") == 4){
+                textField05.setText("S");
+            } if (word.indexOf("S") == 5 || word.lastIndexOf("S") == 5){
+                textField06.setText("S");
+            }
         } else {
             sButton.setBackground(Color.red);
             mistakes += 1;
@@ -666,8 +744,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void tButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tButtonActionPerformed
         if (word.contains("T")){
             tButton.setBackground(Color.green);
-            System.out.print(word.indexOf("T"));
-            //System.out.print(wordLength);
+            if (word.indexOf("T") == 0 || word.lastIndexOf("T") == 0){
+                textField01.setText("T");
+            } if (word.indexOf("T") == 1 || word.lastIndexOf("T") == 1){
+                textField02.setText("T");
+            } if (word.indexOf("T") == 2 || word.lastIndexOf("T") == 2){
+                textField03.setText("T");
+            } if (word.indexOf("T") == 3 || word.lastIndexOf("T") == 3){
+                textField04.setText("T");
+            } if (word.indexOf("T") == 4 || word.lastIndexOf("T") == 4){
+                textField05.setText("T");
+            } if (word.indexOf("T") == 5 || word.lastIndexOf("T") == 5){
+                textField06.setText("T");
+            }
         } else {
             tButton.setBackground(Color.red);
             mistakes += 1;
@@ -677,8 +766,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
         if (word.contains("U")){
             uButton.setBackground(Color.green);
-            System.out.print(word.indexOf("U"));
-            //System.out.print(wordLength);
+            if (word.indexOf("U") == 0 || word.lastIndexOf("U") == 0){
+                textField01.setText("U");
+            } if (word.indexOf("U") == 1 || word.lastIndexOf("U") == 1){
+                textField02.setText("U");
+            } if (word.indexOf("U") == 2 || word.lastIndexOf("U") == 2){
+                textField03.setText("U");
+            } if (word.indexOf("U") == 3 || word.lastIndexOf("U") == 3){
+                textField04.setText("U");
+            } if (word.indexOf("U") == 4 || word.lastIndexOf("U") == 4){
+                textField05.setText("U");
+            } if (word.indexOf("U") == 5 || word.lastIndexOf("U") == 5){
+                textField06.setText("U");
+            }
         } else {
             uButton.setBackground(Color.red);
             mistakes += 1;
@@ -688,8 +788,19 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private void vButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vButtonActionPerformed
         if (word.contains("V")){
             vButton.setBackground(Color.green);
-            System.out.print(word.indexOf("V"));
-            //System.out.print(wordLength);
+            if (word.indexOf("V") == 0 || word.lastIndexOf("V") == 0){
+                textField01.setText("V");
+            } if (word.indexOf("V") == 1 || word.lastIndexOf("V") == 1){
+                textField02.setText("V");
+            } if (word.indexOf("V") == 2 || word.lastIndexOf("V") == 2){
+                textField03.setText("V");
+            } if (word.indexOf("V") == 3 || word.lastIndexOf("V") == 3){
+                textField04.setText("V");
+            } if (word.indexOf("V") == 4 || word.lastIndexOf("V") == 4){
+                textField05.setText("V");
+            } if (word.indexOf("V") == 5 || word.lastIndexOf("V") == 5){
+                textField06.setText("V");
+            }
         } else {
             vButton.setBackground(Color.red);
             mistakes += 1;
