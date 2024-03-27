@@ -74,6 +74,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
         WordLengthSlider = new javax.swing.JSlider();
         WordLengthLabel = new javax.swing.JLabel();
         mistakeCounterLabel = new javax.swing.JLabel();
+        resetButton = new javax.swing.JButton();
+        backButton = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -325,7 +327,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addComponent(yButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(zButton)))
-                .addContainerGap())
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -365,7 +367,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(xButton)
                     .addComponent(yButton)
                     .addComponent(zButton))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -392,6 +394,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             }
         });
 
+        resetButton.setText("RESET");
+        resetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetButtonActionPerformed(evt);
+            }
+        });
+
+        backButton.setText("BACK");
+        backButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -401,29 +417,35 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(45, 45, 45)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(235, 235, 235)
-                                .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 16, Short.MAX_VALUE))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 8, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(mistakeCounterLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(WordLengthLabel)
-                            .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(WordLengthLabel)
+                        .addGap(46, 46, 46)
+                        .addComponent(resetButton)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -431,7 +453,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(WordLengthLabel)
-                    .addComponent(mistakeCounterLabel))
+                    .addComponent(mistakeCounterLabel)
+                    .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -442,9 +465,10 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(16, 16, 16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -801,6 +825,48 @@ public class mainHangmanUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_WordLengthSliderStateChanged
 
+    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+        mistakes = 0;
+        mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+        textField01.setText("");
+        textField02.setText("");
+        textField03.setText("");
+        textField04.setText("");
+        textField05.setText("");
+        textField06.setText("");
+        aButton.setBackground(Color.LIGHT_GRAY);
+        bButton.setBackground(Color.LIGHT_GRAY);
+        cButton.setBackground(Color.LIGHT_GRAY);
+        dButton.setBackground(Color.LIGHT_GRAY);
+        eButton.setBackground(Color.LIGHT_GRAY);
+        fButton.setBackground(Color.LIGHT_GRAY);
+        gButton.setBackground(Color.LIGHT_GRAY);
+        hButton.setBackground(Color.LIGHT_GRAY);
+        iButton.setBackground(Color.LIGHT_GRAY);
+        jButton.setBackground(Color.LIGHT_GRAY);
+        kButton.setBackground(Color.LIGHT_GRAY);
+        lButton.setBackground(Color.LIGHT_GRAY);
+        mButton.setBackground(Color.LIGHT_GRAY);
+        nButton.setBackground(Color.LIGHT_GRAY);
+        oButton.setBackground(Color.LIGHT_GRAY);
+        pButton.setBackground(Color.LIGHT_GRAY);
+        qButton.setBackground(Color.LIGHT_GRAY);
+        rButton.setBackground(Color.LIGHT_GRAY);
+        sButton.setBackground(Color.LIGHT_GRAY);
+        tButton.setBackground(Color.LIGHT_GRAY);
+        uButton.setBackground(Color.LIGHT_GRAY);
+        vButton.setBackground(Color.LIGHT_GRAY);
+        wButton.setBackground(Color.LIGHT_GRAY);
+        xButton.setBackground(Color.LIGHT_GRAY);
+        yButton.setBackground(Color.LIGHT_GRAY);
+        zButton.setBackground(Color.LIGHT_GRAY);
+    }//GEN-LAST:event_resetButtonActionPerformed
+
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        hangmanUI open = new hangmanUI();
+        open.setVisible(true);
+    }//GEN-LAST:event_backButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -853,6 +919,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private javax.swing.JSlider WordLengthSlider;
     private javax.swing.JButton aButton;
     private javax.swing.JButton bButton;
+    private javax.swing.JToggleButton backButton;
     private javax.swing.JButton cButton;
     private javax.swing.JButton dButton;
     private javax.swing.JButton eButton;
@@ -872,6 +939,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private javax.swing.JButton pButton;
     private javax.swing.JButton qButton;
     private javax.swing.JButton rButton;
+    private javax.swing.JButton resetButton;
     private javax.swing.JButton sButton;
     private javax.swing.JButton tButton;
     private javax.swing.JTextField textField01;

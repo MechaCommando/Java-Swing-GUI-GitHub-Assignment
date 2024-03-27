@@ -63,35 +63,43 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="235" max="-2" attributes="0"/>
-                                  <Component id="textField01" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textField02" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textField03" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textField04" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textField05" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="textField06" min="-2" pref="27" max="-2" attributes="0"/>
-                              </Group>
                               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="235" pref="235" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="textField01" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textField02" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textField03" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textField04" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textField05" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="textField06" min="-2" pref="27" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="WordLengthSlider" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
                           </Group>
-                          <EmptySpace min="0" pref="16" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="mistakeCounterLabel" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="WordLengthLabel" min="-2" max="-2" attributes="0"/>
-                              <Component id="WordLengthSlider" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="WordLengthLabel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                          <Component id="resetButton" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="backButton" min="-2" pref="86" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -102,6 +110,7 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="WordLengthLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="mistakeCounterLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="resetButton" alignment="0" min="-2" pref="15" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
                   <Component id="WordLengthSlider" min="-2" max="-2" attributes="0"/>
@@ -114,9 +123,10 @@
                       <Component id="textField05" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="textField06" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="82" max="32767" attributes="0"/>
+                  <EmptySpace pref="69" max="32767" attributes="0"/>
                   <Component id="jPanel2" min="-2" pref="109" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="backButton" min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -191,7 +201,7 @@
                               <Component id="zButton" linkSize="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace pref="149" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -222,7 +232,7 @@
                           <Component id="qButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="rButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="sButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="tButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -233,7 +243,7 @@
                           <Component id="yButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="zButton" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="25" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -491,6 +501,22 @@
           </Properties>
           <Events>
             <EventHandler event="componentHidden" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="mistakeCounterLabelComponentHidden"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="resetButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="RESET"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resetButtonActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="backButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="BACK"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="backButtonActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
