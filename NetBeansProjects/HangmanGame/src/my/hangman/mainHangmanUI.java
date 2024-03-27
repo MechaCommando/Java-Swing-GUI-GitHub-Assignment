@@ -782,10 +782,26 @@ public class mainHangmanUI extends javax.swing.JFrame {
             mButton.setBackground(Color.red);
             mistakes += 1;
         }
-        //FIXX
-        if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+        
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
             System.out.print("You WIN!!!");
+            }
         }
+        
+        
     }//GEN-LAST:event_mButtonActionPerformed
 
     private void nButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nButtonActionPerformed
