@@ -76,6 +76,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
         mistakeCounterLabel = new javax.swing.JLabel();
         resetButton = new javax.swing.JButton();
         backButton = new javax.swing.JToggleButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -408,6 +409,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/1000_F_517383341_8nWEFfM1KL3K5LNTjUDrne3x0kZiuxuj.jpg"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -415,11 +418,12 @@ public class mainHangmanUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addGap(36, 36, 36)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(235, 235, 235)
+                                .addComponent(jLabel2)
+                                .addGap(169, 169, 169)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -434,7 +438,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 8, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(mistakeCounterLabel)
@@ -449,7 +453,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -458,18 +462,25 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addComponent(mistakeCounterLabel)))
                 .addGap(5, 5, 5)
                 .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)))
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -492,1242 +503,12 @@ public class mainHangmanUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
-        if (word.contains("F")){
-            fButton.setBackground(Color.green);
-            if (word.indexOf("F") == 0 || word.lastIndexOf("F") == 0){
-                textField01.setText("F");
-            } if (word.indexOf("F") == 1 || word.lastIndexOf("F") == 1){
-                textField02.setText("F");
-            } if (word.indexOf("F") == 2 || word.lastIndexOf("F") == 2){
-                textField03.setText("F");
-            } if (word.indexOf("F") == 3 || word.lastIndexOf("F") == 3){
-                textField04.setText("F");
-            } if (word.indexOf("F") == 4 || word.lastIndexOf("F") == 4){
-                textField05.setText("F");
-            } if (word.indexOf("F") == 5 || word.lastIndexOf("F") == 5){
-                textField06.setText("F");
-            }
-        } else {
-            fButton.setBackground(Color.red);
-            mistakes += 1;
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-            
-        }
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_fButtonActionPerformed
-
-    private void eButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eButtonActionPerformed
-        if (word.contains("E")){
-            eButton.setBackground(Color.green);
-            if (word.indexOf("E") == 0 || word.lastIndexOf("E") == 0){
-                textField01.setText("E");
-            } if (word.indexOf("E") == 1 || word.lastIndexOf("E") == 1){
-                textField02.setText("E");
-            } if (word.indexOf("E") == 2 || word.lastIndexOf("E") == 2){
-                textField03.setText("E");
-            } if (word.indexOf("E") == 3 || word.lastIndexOf("E") == 3){
-                textField04.setText("E");
-            } if (word.indexOf("E") == 4 || word.lastIndexOf("E") == 4){
-                textField05.setText("E");
-            } if (word.indexOf("E") == 5 || word.lastIndexOf("E") == 5){
-                textField06.setText("E");
-            }
-        } else {
-            eButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_eButtonActionPerformed
-
-    private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
-        if (word.contains("D")){
-            dButton.setBackground(Color.green);
-            if (word.indexOf("D") == 0 || word.lastIndexOf("D") == 0){
-                textField01.setText("D");
-            } if (word.indexOf("D") == 1 || word.lastIndexOf("D") == 1){
-                textField02.setText("D");
-            } if (word.indexOf("D") == 2 || word.lastIndexOf("D") == 2){
-                textField03.setText("D");
-            } if (word.indexOf("D") == 3 || word.lastIndexOf("D") == 3){
-                textField04.setText("A");
-            } if (word.indexOf("D") == 4 || word.lastIndexOf("D") == 4){
-                textField05.setText("D");
-            } if (word.indexOf("D") == 5 || word.lastIndexOf("D") == 5){
-                textField06.setText("D");
-            }
-        } else {
-            dButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_dButtonActionPerformed
-
-    private void aButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aButtonActionPerformed
-        if (word.contains("A")){
-            aButton.setBackground(Color.green);
-            if (word.indexOf("A") == 0 || word.lastIndexOf("A") == 0){
-                textField01.setText("A");
-            } if (word.indexOf("A") == 1 || word.lastIndexOf("A") == 1){
-                textField02.setText("A");
-            } if (word.indexOf("A") == 2 || word.lastIndexOf("A") == 2){
-                textField03.setText("A");
-            } if (word.indexOf("A") == 3 || word.lastIndexOf("A") == 3){
-                textField04.setText("A");
-            } if (word.indexOf("A") == 4 || word.lastIndexOf("A") == 4){
-                textField05.setText("A");
-            } if (word.indexOf("A") == 5 || word.lastIndexOf("A") == 5){
-                textField06.setText("A");
-            }
-        } else {
-            aButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_aButtonActionPerformed
-
-    private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
-        if (word.contains("B")){
-            bButton.setBackground(Color.green);
-            if (word.indexOf("B") == 0 || word.lastIndexOf("B") == 0){
-                textField01.setText("B");
-            } if (word.indexOf("B") == 1 || word.lastIndexOf("B") == 1){
-                textField02.setText("B");
-            } if (word.indexOf("B") == 2 || word.lastIndexOf("B") == 2){
-                textField03.setText("B");
-            } if (word.indexOf("B") == 3 || word.lastIndexOf("B") == 3){
-                textField04.setText("B");
-            } if (word.indexOf("B") == 4 || word.lastIndexOf("B") == 4){
-                textField05.setText("B");
-            } if (word.indexOf("B") == 5 || word.lastIndexOf("B") == 5){
-                textField06.setText("B");
-            }
-        } else {
-            bButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_bButtonActionPerformed
-
-    private void cButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cButtonActionPerformed
-        if (word.contains("C")){
-            cButton.setBackground(Color.green);
-            if (word.indexOf("C") == 0 || word.lastIndexOf("C") == 0){
-                textField01.setText("C");
-            } if (word.indexOf("C") == 1 || word.lastIndexOf("C") == 1){
-                textField02.setText("C");
-            } if (word.indexOf("C") == 2 || word.lastIndexOf("C") == 2){
-                textField03.setText("C");
-            } if (word.indexOf("C") == 3 || word.lastIndexOf("C") == 3){
-                textField04.setText("C");
-            } if (word.indexOf("C") == 4 || word.lastIndexOf("C") == 4){
-                textField05.setText("C");
-            } if (word.indexOf("C") == 5 || word.lastIndexOf("C") == 5){
-                textField06.setText("C");
-            }
-        } else {
-            cButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_cButtonActionPerformed
-
-    private void gButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButtonActionPerformed
-        if (word.contains("G")){
-            gButton.setBackground(Color.green);
-            if (word.indexOf("G") == 0 || word.lastIndexOf("G") == 0){
-                textField01.setText("G");
-            } if (word.indexOf("G") == 1 || word.lastIndexOf("G") == 1){
-                textField02.setText("G");
-            } if (word.indexOf("G") == 2 || word.lastIndexOf("G") == 2){
-                textField03.setText("G");
-            } if (word.indexOf("G") == 3 || word.lastIndexOf("G") == 3){
-                textField04.setText("G");
-            } if (word.indexOf("G") == 4 || word.lastIndexOf("G") == 4){
-                textField05.setText("G");
-            } if (word.indexOf("G") == 5 || word.lastIndexOf("G") == 5){
-                textField06.setText("G");
-            }
-        } else {
-            gButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_gButtonActionPerformed
-
-    private void hButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hButtonActionPerformed
-        if (word.contains("H")){
-            hButton.setBackground(Color.green);
-            if (word.indexOf("H") == 0 || word.lastIndexOf("H") == 0){
-                textField01.setText("H");
-            } if (word.indexOf("H") == 1 || word.lastIndexOf("H") == 1){
-                textField02.setText("H");
-            } if (word.indexOf("H") == 2 || word.lastIndexOf("H") == 2){
-                textField03.setText("H");
-            } if (word.indexOf("H") == 3 || word.lastIndexOf("H") == 3){
-                textField04.setText("H");
-            } if (word.indexOf("H") == 4 || word.lastIndexOf("H") == 4){
-                textField05.setText("H");
-            } if (word.indexOf("H") == 5 || word.lastIndexOf("H") == 5){
-                textField06.setText("H");
-            }
-        } else {
-            hButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_hButtonActionPerformed
-
-    private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
-        if (word.contains("Q")){
-            qButton.setBackground(Color.green);
-            if (word.indexOf("Q") == 0 || word.lastIndexOf("Q") == 0){
-                textField01.setText("Q");
-            } if (word.indexOf("Q") == 1 || word.lastIndexOf("Q") == 1){
-                textField02.setText("Q");
-            } if (word.indexOf("Q") == 2 || word.lastIndexOf("Q") == 2){
-                textField03.setText("Q");
-            } if (word.indexOf("Q") == 3 || word.lastIndexOf("Q") == 3){
-                textField04.setText("Q");
-            } if (word.indexOf("Q") == 4 || word.lastIndexOf("Q") == 4){
-                textField05.setText("Q");
-            } if (word.indexOf("Q") == 5 || word.lastIndexOf("Q") == 5){
-                textField06.setText("Q");
-            }
-        } else {
-            qButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_qButtonActionPerformed
-
-    private void rButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonActionPerformed
-        if (word.contains("R")){
-            rButton.setBackground(Color.green);
-            if (word.indexOf("R") == 0 || word.lastIndexOf("R") == 0){
-                textField01.setText("R");
-            } if (word.indexOf("R") == 1 || word.lastIndexOf("R") == 1){
-                textField02.setText("R");
-            } if (word.indexOf("R") == 2 || word.lastIndexOf("R") == 2){
-                textField03.setText("R");
-            } if (word.indexOf("R") == 3 || word.lastIndexOf("R") == 3){
-                textField04.setText("R");
-            } if (word.indexOf("R") == 4 || word.lastIndexOf("R") == 4){
-                textField05.setText("R");
-            } if (word.indexOf("R") == 5 || word.lastIndexOf("R") == 5){
-                textField06.setText("R");
-            }
-        } else {
-            rButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_rButtonActionPerformed
-
-    private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
-        if (word.contains("S")){
-            sButton.setBackground(Color.green);
-            if (word.indexOf("S") == 0 || word.lastIndexOf("S") == 0){
-                textField01.setText("S");
-            } if (word.indexOf("S") == 1 || word.lastIndexOf("S") == 1){
-                textField02.setText("S");
-            } if (word.indexOf("S") == 2 || word.lastIndexOf("S") == 2){
-                textField03.setText("S");
-            } if (word.indexOf("S") == 3 || word.lastIndexOf("S") == 3){
-                textField04.setText("S");
-            } if (word.indexOf("S") == 4 || word.lastIndexOf("S") == 4){
-                textField05.setText("S");
-            } if (word.indexOf("S") == 5 || word.lastIndexOf("S") == 5){
-                textField06.setText("S");
-            }
-        } else {
-            sButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_sButtonActionPerformed
-
-    private void tButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tButtonActionPerformed
-        if (word.contains("T")){
-            tButton.setBackground(Color.green);
-            if (word.indexOf("T") == 0 || word.lastIndexOf("T") == 0){
-                textField01.setText("T");
-            } if (word.indexOf("T") == 1 || word.lastIndexOf("T") == 1){
-                textField02.setText("T");
-            } if (word.indexOf("T") == 2 || word.lastIndexOf("T") == 2){
-                textField03.setText("T");
-            } if (word.indexOf("T") == 3 || word.lastIndexOf("T") == 3){
-                textField04.setText("T");
-            } if (word.indexOf("T") == 4 || word.lastIndexOf("T") == 4){
-                textField05.setText("T");
-            } if (word.indexOf("T") == 5 || word.lastIndexOf("T") == 5){
-                textField06.setText("T");
-            }
-        } else {
-            tButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_tButtonActionPerformed
-
-    private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
-        if (word.contains("U")){
-            uButton.setBackground(Color.green);
-            if (word.indexOf("U") == 0 || word.lastIndexOf("U") == 0){
-                textField01.setText("U");
-            } if (word.indexOf("U") == 1 || word.lastIndexOf("U") == 1){
-                textField02.setText("U");
-            } if (word.indexOf("U") == 2 || word.lastIndexOf("U") == 2){
-                textField03.setText("U");
-            } if (word.indexOf("U") == 3 || word.lastIndexOf("U") == 3){
-                textField04.setText("U");
-            } if (word.indexOf("U") == 4 || word.lastIndexOf("U") == 4){
-                textField05.setText("U");
-            } if (word.indexOf("U") == 5 || word.lastIndexOf("U") == 5){
-                textField06.setText("U");
-            }
-        } else {
-            uButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-        
-    }//GEN-LAST:event_uButtonActionPerformed
-
-    private void vButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vButtonActionPerformed
-        if (word.contains("V")){
-            vButton.setBackground(Color.green);
-            if (word.indexOf("V") == 0 || word.lastIndexOf("V") == 0){
-                textField01.setText("V");
-            } if (word.indexOf("V") == 1 || word.lastIndexOf("V") == 1){
-                textField02.setText("V");
-            } if (word.indexOf("V") == 2 || word.lastIndexOf("V") == 2){
-                textField03.setText("V");
-            } if (word.indexOf("V") == 3 || word.lastIndexOf("V") == 3){
-                textField04.setText("V");
-            } if (word.indexOf("V") == 4 || word.lastIndexOf("V") == 4){
-                textField05.setText("V");
-            } if (word.indexOf("V") == 5 || word.lastIndexOf("V") == 5){
-                textField06.setText("V");
-            }
-        } else {
-            vButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_vButtonActionPerformed
-
-    private void wButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wButtonActionPerformed
-        if (word.contains("W")){
-            wButton.setBackground(Color.green);
-            if (word.indexOf("W") == 0 || word.lastIndexOf("W") == 0){
-                textField01.setText("W");
-            } if (word.indexOf("W") == 1 || word.lastIndexOf("W") == 1){
-                textField02.setText("W");
-            } if (word.indexOf("W") == 2 || word.lastIndexOf("W") == 2){
-                textField03.setText("W");
-            } if (word.indexOf("W") == 3 || word.lastIndexOf("W") == 3){
-                textField04.setText("W");
-            } if (word.indexOf("W") == 4 || word.lastIndexOf("W") == 4){
-                textField05.setText("W");
-            } if (word.indexOf("W") == 5 || word.lastIndexOf("W") == 5){
-                textField06.setText("W");
-            }
-        } else {
-            wButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_wButtonActionPerformed
-
-    private void xButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xButtonActionPerformed
-        if (word.contains("X")){
-            xButton.setBackground(Color.green);
-            if (word.indexOf("X") == 0 || word.lastIndexOf("X") == 0){
-                textField01.setText("X");
-            } if (word.indexOf("X") == 1 || word.lastIndexOf("X") == 1){
-                textField02.setText("X");
-            } if (word.indexOf("X") == 2 || word.lastIndexOf("X") == 2){
-                textField03.setText("X");
-            } if (word.indexOf("X") == 3 || word.lastIndexOf("X") == 3){
-                textField04.setText("X");
-            } if (word.indexOf("X") == 4 || word.lastIndexOf("X") == 4){
-                textField05.setText("X");
-            } if (word.indexOf("X") == 5 || word.lastIndexOf("X") == 5){
-                textField06.setText("X");
-            }
-        } else {
-            xButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_xButtonActionPerformed
-
-    private void iButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iButtonActionPerformed
-        if (word.contains("I")){
-            iButton.setBackground(Color.green);
-            if (word.indexOf("I") == 0 || word.lastIndexOf("I") == 0){
-                textField01.setText("I");
-            } if (word.indexOf("I") == 1 || word.lastIndexOf("I") == 1){
-                textField02.setText("I");
-            } if (word.indexOf("I") == 2 || word.lastIndexOf("I") == 2){
-                textField03.setText("I");
-            } if (word.indexOf("I") == 3 || word.lastIndexOf("I") == 3){
-                textField04.setText("I");
-            } if (word.indexOf("I") == 4 || word.lastIndexOf("I") == 4){
-                textField05.setText("I");
-            } if (word.indexOf("I") == 5 || word.lastIndexOf("I") == 5){
-                textField06.setText("I");
-            }
-        } else {
-            iButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_iButtonActionPerformed
-
-    private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
-        if (word.contains("J")){
-            jButton.setBackground(Color.green);
-            if (word.indexOf("J") == 0 || word.lastIndexOf("J") == 0){
-                textField01.setText("J");
-            } if (word.indexOf("J") == 1 || word.lastIndexOf("J") == 1){
-                textField02.setText("J");
-            } if (word.indexOf("J") == 2 || word.lastIndexOf("J") == 2){
-                textField03.setText("J");
-            } if (word.indexOf("J") == 3 || word.lastIndexOf("J") == 3){
-                textField04.setText("J");
-            } if (word.indexOf("J") == 4 || word.lastIndexOf("J") == 4){
-                textField05.setText("J");
-            } if (word.indexOf("J") == 5 || word.lastIndexOf("J") == 5){
-                textField06.setText("J");
-            }
-        } else {
-            jButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_jButtonActionPerformed
-
-    private void kButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButtonActionPerformed
-        if (word.contains("K")){
-            kButton.setBackground(Color.green);
-            if (word.indexOf("K") == 0 || word.lastIndexOf("K") == 0){
-                textField01.setText("K");
-            } if (word.indexOf("K") == 1 || word.lastIndexOf("K") == 1){
-                textField02.setText("K");
-            } if (word.indexOf("K") == 2 || word.lastIndexOf("K") == 2){
-                textField03.setText("K");
-            } if (word.indexOf("K") == 3 || word.lastIndexOf("K") == 3){
-                textField04.setText("K");
-            } if (word.indexOf("K") == 4 || word.lastIndexOf("K") == 4){
-                textField05.setText("K");
-            } if (word.indexOf("K") == 5 || word.lastIndexOf("K") == 5){
-                textField06.setText("K");
-            }
-        } else {
-            kButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_kButtonActionPerformed
-
-    private void lButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lButtonActionPerformed
-        if (word.contains("L")){
-            lButton.setBackground(Color.green);
-            if (word.indexOf("L") == 0 || word.lastIndexOf("L") == 0){
-                textField01.setText("L");
-            } if (word.indexOf("L") == 1 || word.lastIndexOf("L") == 1){
-                textField02.setText("L");
-            } if (word.indexOf("L") == 2 || word.lastIndexOf("L") == 2){
-                textField03.setText("L");
-            } if (word.indexOf("L") == 3 || word.lastIndexOf("L") == 3){
-                textField04.setText("L");
-            } if (word.indexOf("L") == 4 || word.lastIndexOf("L") == 4){
-                textField05.setText("L");
-            } if (word.indexOf("L") == 5 || word.lastIndexOf("L") == 5){
-                textField06.setText("L");
-            }
-        } else {
-            lButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_lButtonActionPerformed
-
-    private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
-        if (word.contains("M")){
-            mButton.setBackground(Color.green);
-            if (word.indexOf("M") == 0 || word.lastIndexOf("M") == 0){
-                textField01.setText("M");
-            } if (word.indexOf("M") == 1 || word.lastIndexOf("M") == 1){
-                textField02.setText("M");
-            } if (word.indexOf("M") == 2 || word.lastIndexOf("M") == 2){
-                textField03.setText("M");
-            } if (word.indexOf("M") == 3 || word.lastIndexOf("M") == 3){
-                textField04.setText("M");
-            } if (word.indexOf("M") == 4 || word.lastIndexOf("M") == 4){
-                textField05.setText("M");
-            } if (word.indexOf("M") == 5 || word.lastIndexOf("M") == 5){
-                textField06.setText("M");
-            }
-        } else {
-            mButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-        
-        
-    }//GEN-LAST:event_mButtonActionPerformed
-
-    private void nButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nButtonActionPerformed
-        if (word.contains("N")){
-            nButton.setBackground(Color.green);
-            if (word.indexOf("N") == 0 || word.lastIndexOf("N") == 0){
-                textField01.setText("N");
-            } if (word.indexOf("N") == 1 || word.lastIndexOf("N") == 1){
-                textField02.setText("N");
-            } if (word.indexOf("N") == 2 || word.lastIndexOf("N") == 2){
-                textField03.setText("N");
-            } if (word.indexOf("N") == 3 || word.lastIndexOf("N") == 3){
-                textField04.setText("N");
-            } if (word.indexOf("N") == 4 || word.lastIndexOf("N") == 4){
-                textField05.setText("N");
-            } if (word.indexOf("N") == 5 || word.lastIndexOf("N") == 5){
-                textField06.setText("N");
-            }
-        } else {
-            nButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_nButtonActionPerformed
-
-    private void oButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oButtonActionPerformed
-        if (word.contains("O")){
-            oButton.setBackground(Color.green);
-            if (word.indexOf("O") == 0 || word.lastIndexOf("O") == 0){
-                textField01.setText("O");
-            } if (word.indexOf("O") == 1 || word.lastIndexOf("O") == 1){
-                textField02.setText("O");
-            } if (word.indexOf("O") == 2 || word.lastIndexOf("O") == 2){
-                textField03.setText("O");
-            } if (word.indexOf("O") == 3 || word.lastIndexOf("O") == 3){
-                textField04.setText("O");
-            } if (word.indexOf("O") == 4 || word.lastIndexOf("O") == 4){
-                textField05.setText("O");
-            } if (word.indexOf("O") == 5 || word.lastIndexOf("O") == 5){
-                textField06.setText("O");
-            }
-        } else {
-            oButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_oButtonActionPerformed
-
-    private void pButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pButtonActionPerformed
-        if (word.contains("P")){
-            pButton.setBackground(Color.green);
-            if (word.indexOf("P") == 0 || word.lastIndexOf("P") == 0){
-                textField01.setText("P");
-            } if (word.indexOf("P") == 1 || word.lastIndexOf("P") == 1){
-                textField02.setText("P");
-            } if (word.indexOf("P") == 2 || word.lastIndexOf("P") == 2){
-                textField03.setText("P");
-            } if (word.indexOf("P") == 3 || word.lastIndexOf("P") == 3){
-                textField04.setText("P");
-            } if (word.indexOf("P") == 4 || word.lastIndexOf("P") == 4){
-                textField05.setText("P");
-            } if (word.indexOf("P") == 5 || word.lastIndexOf("P") == 5){
-                textField06.setText("P");
-            }
-        } else {
-            pButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_pButtonActionPerformed
-
-    private void yButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yButtonActionPerformed
-        if (word.contains("Y")){
-            yButton.setBackground(Color.green);
-            if (word.indexOf("Y") == 0 || word.lastIndexOf("Y") == 0){
-                textField01.setText("Y");
-            } if (word.indexOf("Y") == 1 || word.lastIndexOf("Y") == 1){
-                textField02.setText("Y");
-            } if (word.indexOf("Y") == 2 || word.lastIndexOf("Y") == 2){
-                textField03.setText("Y");
-            } if (word.indexOf("Y") == 3 || word.lastIndexOf("Y") == 3){
-                textField04.setText("Y");
-            } if (word.indexOf("Y") == 4 || word.lastIndexOf("Y") == 4){
-                textField05.setText("Y");
-            } if (word.indexOf("Y") == 5 || word.lastIndexOf("Y") == 5){
-                textField06.setText("Y");
-            }
-        } else {
-            yButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_yButtonActionPerformed
-
-    private void zButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zButtonActionPerformed
-        if (word.contains("Z")){
-            zButton.setBackground(Color.green);
-            if (word.indexOf("Z") == 0 || word.lastIndexOf("Z") == 0){
-                textField01.setText("Z");
-            } if (word.indexOf("Z") == 1 || word.lastIndexOf("Z") == 1){
-                textField02.setText("Z");
-            } if (word.indexOf("Z") == 2 || word.lastIndexOf("Z") == 2){
-                textField03.setText("Z");
-            } if (word.indexOf("Z") == 3 || word.lastIndexOf("Z") == 3){
-                textField04.setText("Z");
-            } if (word.indexOf("Z") == 4 || word.lastIndexOf("Z") == 4){
-                textField05.setText("Z");
-            } if (word.indexOf("Z") == 5 || word.lastIndexOf("Z") == 5){
-                textField06.setText("Z");
-            }
-        } else {
-            zButton.setBackground(Color.red);
-            mistakes += 1;
-            
-            if (mistakes <= maxMistakes){
-                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
-            } else {
-                System.out.print("YOU LOSE");
-            }
-        }
-        
-        if (wordLength == 3){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 4){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 5){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
-            }
-        } else if (wordLength == 6){
-            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-            System.out.print("You WIN!!!");
-            }
-        }
-    }//GEN-LAST:event_zButtonActionPerformed
-
-    private void mistakeCounterLabelComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_mistakeCounterLabelComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_mistakeCounterLabelComponentHidden
-
-    private void WordLengthSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_WordLengthSliderStateChanged
-        WordLengthLabel.setText("Word Length: " + String.valueOf(WordLengthSlider.getValue()));
-        switch (WordLengthSlider.getValue()){
-            case 3: 
-                textField01.show();
-                textField02.show();
-                textField03.show();
-                textField04.hide();
-                textField05.hide();
-                textField06.hide();
-                break;
-            case 4: 
-                textField01.show();
-                textField02.show();
-                textField03.show();
-                textField04.show();
-                textField05.hide();
-                textField06.hide();
-                break;
-            case 5: 
-                textField01.show();
-                textField02.show();
-                textField03.show();
-                textField04.show();
-                textField05.show();
-                textField06.hide();
-                break;
-            case 6: 
-                textField01.show();
-                textField02.show();
-                textField03.show();
-                textField04.show();
-                textField05.show();
-                textField06.show();
-                break;
-        }
-    }//GEN-LAST:event_WordLengthSliderStateChanged
+    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        hangmanUI newframe = new hangmanUI();
+        newframe.setVisible(true);
+        newframe.toFront();
+        dispose();// to Main page
+    }//GEN-LAST:event_backButtonActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
         wordLength = WordLengthSlider.getValue();
@@ -1779,18 +560,1246 @@ public class mainHangmanUI extends javax.swing.JFrame {
             word = fiveLetterWords.get(randChoice);
         }  else if (wordLength == 4){
             word = sixLetterWords.get(randChoice);
-        }  
+        }
         System.out.println(word);
-        
-        
+
     }//GEN-LAST:event_resetButtonActionPerformed
 
-    private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
-        hangmanUI newframe = new hangmanUI();
-        newframe.setVisible(true);
-        newframe.toFront();  
-        dispose();// to Main page
-    }//GEN-LAST:event_backButtonActionPerformed
+    private void mistakeCounterLabelComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_mistakeCounterLabelComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mistakeCounterLabelComponentHidden
+
+    private void WordLengthSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_WordLengthSliderStateChanged
+        WordLengthLabel.setText("Word Length: " + String.valueOf(WordLengthSlider.getValue()));
+        switch (WordLengthSlider.getValue()){
+            case 3:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.hide();
+            textField05.hide();
+            textField06.hide();
+            break;
+            case 4:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.show();
+            textField05.hide();
+            textField06.hide();
+            break;
+            case 5:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.show();
+            textField05.show();
+            textField06.hide();
+            break;
+            case 6:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.show();
+            textField05.show();
+            textField06.show();
+            break;
+        }
+    }//GEN-LAST:event_WordLengthSliderStateChanged
+
+    private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
+        if (word.contains("U")){
+            uButton.setBackground(Color.green);
+            if (word.indexOf("U") == 0 || word.lastIndexOf("U") == 0){
+                textField01.setText("U");
+            } if (word.indexOf("U") == 1 || word.lastIndexOf("U") == 1){
+                textField02.setText("U");
+            } if (word.indexOf("U") == 2 || word.lastIndexOf("U") == 2){
+                textField03.setText("U");
+            } if (word.indexOf("U") == 3 || word.lastIndexOf("U") == 3){
+                textField04.setText("U");
+            } if (word.indexOf("U") == 4 || word.lastIndexOf("U") == 4){
+                textField05.setText("U");
+            } if (word.indexOf("U") == 5 || word.lastIndexOf("U") == 5){
+                textField06.setText("U");
+            }
+        } else {
+            uButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+
+    }//GEN-LAST:event_uButtonActionPerformed
+
+    private void yButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yButtonActionPerformed
+        if (word.contains("Y")){
+            yButton.setBackground(Color.green);
+            if (word.indexOf("Y") == 0 || word.lastIndexOf("Y") == 0){
+                textField01.setText("Y");
+            } if (word.indexOf("Y") == 1 || word.lastIndexOf("Y") == 1){
+                textField02.setText("Y");
+            } if (word.indexOf("Y") == 2 || word.lastIndexOf("Y") == 2){
+                textField03.setText("Y");
+            } if (word.indexOf("Y") == 3 || word.lastIndexOf("Y") == 3){
+                textField04.setText("Y");
+            } if (word.indexOf("Y") == 4 || word.lastIndexOf("Y") == 4){
+                textField05.setText("Y");
+            } if (word.indexOf("Y") == 5 || word.lastIndexOf("Y") == 5){
+                textField06.setText("Y");
+            }
+        } else {
+            yButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_yButtonActionPerformed
+
+    private void zButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zButtonActionPerformed
+        if (word.contains("Z")){
+            zButton.setBackground(Color.green);
+            if (word.indexOf("Z") == 0 || word.lastIndexOf("Z") == 0){
+                textField01.setText("Z");
+            } if (word.indexOf("Z") == 1 || word.lastIndexOf("Z") == 1){
+                textField02.setText("Z");
+            } if (word.indexOf("Z") == 2 || word.lastIndexOf("Z") == 2){
+                textField03.setText("Z");
+            } if (word.indexOf("Z") == 3 || word.lastIndexOf("Z") == 3){
+                textField04.setText("Z");
+            } if (word.indexOf("Z") == 4 || word.lastIndexOf("Z") == 4){
+                textField05.setText("Z");
+            } if (word.indexOf("Z") == 5 || word.lastIndexOf("Z") == 5){
+                textField06.setText("Z");
+            }
+        } else {
+            zButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_zButtonActionPerformed
+
+    private void iButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iButtonActionPerformed
+        if (word.contains("I")){
+            iButton.setBackground(Color.green);
+            if (word.indexOf("I") == 0 || word.lastIndexOf("I") == 0){
+                textField01.setText("I");
+            } if (word.indexOf("I") == 1 || word.lastIndexOf("I") == 1){
+                textField02.setText("I");
+            } if (word.indexOf("I") == 2 || word.lastIndexOf("I") == 2){
+                textField03.setText("I");
+            } if (word.indexOf("I") == 3 || word.lastIndexOf("I") == 3){
+                textField04.setText("I");
+            } if (word.indexOf("I") == 4 || word.lastIndexOf("I") == 4){
+                textField05.setText("I");
+            } if (word.indexOf("I") == 5 || word.lastIndexOf("I") == 5){
+                textField06.setText("I");
+            }
+        } else {
+            iButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_iButtonActionPerformed
+
+    private void kButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButtonActionPerformed
+        if (word.contains("K")){
+            kButton.setBackground(Color.green);
+            if (word.indexOf("K") == 0 || word.lastIndexOf("K") == 0){
+                textField01.setText("K");
+            } if (word.indexOf("K") == 1 || word.lastIndexOf("K") == 1){
+                textField02.setText("K");
+            } if (word.indexOf("K") == 2 || word.lastIndexOf("K") == 2){
+                textField03.setText("K");
+            } if (word.indexOf("K") == 3 || word.lastIndexOf("K") == 3){
+                textField04.setText("K");
+            } if (word.indexOf("K") == 4 || word.lastIndexOf("K") == 4){
+                textField05.setText("K");
+            } if (word.indexOf("K") == 5 || word.lastIndexOf("K") == 5){
+                textField06.setText("K");
+            }
+        } else {
+            kButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_kButtonActionPerformed
+
+    private void cButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cButtonActionPerformed
+        if (word.contains("C")){
+            cButton.setBackground(Color.green);
+            if (word.indexOf("C") == 0 || word.lastIndexOf("C") == 0){
+                textField01.setText("C");
+            } if (word.indexOf("C") == 1 || word.lastIndexOf("C") == 1){
+                textField02.setText("C");
+            } if (word.indexOf("C") == 2 || word.lastIndexOf("C") == 2){
+                textField03.setText("C");
+            } if (word.indexOf("C") == 3 || word.lastIndexOf("C") == 3){
+                textField04.setText("C");
+            } if (word.indexOf("C") == 4 || word.lastIndexOf("C") == 4){
+                textField05.setText("C");
+            } if (word.indexOf("C") == 5 || word.lastIndexOf("C") == 5){
+                textField06.setText("C");
+            }
+        } else {
+            cButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_cButtonActionPerformed
+
+    private void aButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aButtonActionPerformed
+        if (word.contains("A")){
+            aButton.setBackground(Color.green);
+            if (word.indexOf("A") == 0 || word.lastIndexOf("A") == 0){
+                textField01.setText("A");
+            } if (word.indexOf("A") == 1 || word.lastIndexOf("A") == 1){
+                textField02.setText("A");
+            } if (word.indexOf("A") == 2 || word.lastIndexOf("A") == 2){
+                textField03.setText("A");
+            } if (word.indexOf("A") == 3 || word.lastIndexOf("A") == 3){
+                textField04.setText("A");
+            } if (word.indexOf("A") == 4 || word.lastIndexOf("A") == 4){
+                textField05.setText("A");
+            } if (word.indexOf("A") == 5 || word.lastIndexOf("A") == 5){
+                textField06.setText("A");
+            }
+        } else {
+            aButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_aButtonActionPerformed
+
+    private void wButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wButtonActionPerformed
+        if (word.contains("W")){
+            wButton.setBackground(Color.green);
+            if (word.indexOf("W") == 0 || word.lastIndexOf("W") == 0){
+                textField01.setText("W");
+            } if (word.indexOf("W") == 1 || word.lastIndexOf("W") == 1){
+                textField02.setText("W");
+            } if (word.indexOf("W") == 2 || word.lastIndexOf("W") == 2){
+                textField03.setText("W");
+            } if (word.indexOf("W") == 3 || word.lastIndexOf("W") == 3){
+                textField04.setText("W");
+            } if (word.indexOf("W") == 4 || word.lastIndexOf("W") == 4){
+                textField05.setText("W");
+            } if (word.indexOf("W") == 5 || word.lastIndexOf("W") == 5){
+                textField06.setText("W");
+            }
+        } else {
+            wButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_wButtonActionPerformed
+
+    private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
+        if (word.contains("J")){
+            jButton.setBackground(Color.green);
+            if (word.indexOf("J") == 0 || word.lastIndexOf("J") == 0){
+                textField01.setText("J");
+            } if (word.indexOf("J") == 1 || word.lastIndexOf("J") == 1){
+                textField02.setText("J");
+            } if (word.indexOf("J") == 2 || word.lastIndexOf("J") == 2){
+                textField03.setText("J");
+            } if (word.indexOf("J") == 3 || word.lastIndexOf("J") == 3){
+                textField04.setText("J");
+            } if (word.indexOf("J") == 4 || word.lastIndexOf("J") == 4){
+                textField05.setText("J");
+            } if (word.indexOf("J") == 5 || word.lastIndexOf("J") == 5){
+                textField06.setText("J");
+            }
+        } else {
+            jButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_jButtonActionPerformed
+
+    private void vButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_vButtonActionPerformed
+        if (word.contains("V")){
+            vButton.setBackground(Color.green);
+            if (word.indexOf("V") == 0 || word.lastIndexOf("V") == 0){
+                textField01.setText("V");
+            } if (word.indexOf("V") == 1 || word.lastIndexOf("V") == 1){
+                textField02.setText("V");
+            } if (word.indexOf("V") == 2 || word.lastIndexOf("V") == 2){
+                textField03.setText("V");
+            } if (word.indexOf("V") == 3 || word.lastIndexOf("V") == 3){
+                textField04.setText("V");
+            } if (word.indexOf("V") == 4 || word.lastIndexOf("V") == 4){
+                textField05.setText("V");
+            } if (word.indexOf("V") == 5 || word.lastIndexOf("V") == 5){
+                textField06.setText("V");
+            }
+        } else {
+            vButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_vButtonActionPerformed
+
+    private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
+        if (word.contains("S")){
+            sButton.setBackground(Color.green);
+            if (word.indexOf("S") == 0 || word.lastIndexOf("S") == 0){
+                textField01.setText("S");
+            } if (word.indexOf("S") == 1 || word.lastIndexOf("S") == 1){
+                textField02.setText("S");
+            } if (word.indexOf("S") == 2 || word.lastIndexOf("S") == 2){
+                textField03.setText("S");
+            } if (word.indexOf("S") == 3 || word.lastIndexOf("S") == 3){
+                textField04.setText("S");
+            } if (word.indexOf("S") == 4 || word.lastIndexOf("S") == 4){
+                textField05.setText("S");
+            } if (word.indexOf("S") == 5 || word.lastIndexOf("S") == 5){
+                textField06.setText("S");
+            }
+        } else {
+            sButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_sButtonActionPerformed
+
+    private void qButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_qButtonActionPerformed
+        if (word.contains("Q")){
+            qButton.setBackground(Color.green);
+            if (word.indexOf("Q") == 0 || word.lastIndexOf("Q") == 0){
+                textField01.setText("Q");
+            } if (word.indexOf("Q") == 1 || word.lastIndexOf("Q") == 1){
+                textField02.setText("Q");
+            } if (word.indexOf("Q") == 2 || word.lastIndexOf("Q") == 2){
+                textField03.setText("Q");
+            } if (word.indexOf("Q") == 3 || word.lastIndexOf("Q") == 3){
+                textField04.setText("Q");
+            } if (word.indexOf("Q") == 4 || word.lastIndexOf("Q") == 4){
+                textField05.setText("Q");
+            } if (word.indexOf("Q") == 5 || word.lastIndexOf("Q") == 5){
+                textField06.setText("Q");
+            }
+        } else {
+            qButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_qButtonActionPerformed
+
+    private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
+        if (word.contains("M")){
+            mButton.setBackground(Color.green);
+            if (word.indexOf("M") == 0 || word.lastIndexOf("M") == 0){
+                textField01.setText("M");
+            } if (word.indexOf("M") == 1 || word.lastIndexOf("M") == 1){
+                textField02.setText("M");
+            } if (word.indexOf("M") == 2 || word.lastIndexOf("M") == 2){
+                textField03.setText("M");
+            } if (word.indexOf("M") == 3 || word.lastIndexOf("M") == 3){
+                textField04.setText("M");
+            } if (word.indexOf("M") == 4 || word.lastIndexOf("M") == 4){
+                textField05.setText("M");
+            } if (word.indexOf("M") == 5 || word.lastIndexOf("M") == 5){
+                textField06.setText("M");
+            }
+        } else {
+            mButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+
+    }//GEN-LAST:event_mButtonActionPerformed
+
+    private void tButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tButtonActionPerformed
+        if (word.contains("T")){
+            tButton.setBackground(Color.green);
+            if (word.indexOf("T") == 0 || word.lastIndexOf("T") == 0){
+                textField01.setText("T");
+            } if (word.indexOf("T") == 1 || word.lastIndexOf("T") == 1){
+                textField02.setText("T");
+            } if (word.indexOf("T") == 2 || word.lastIndexOf("T") == 2){
+                textField03.setText("T");
+            } if (word.indexOf("T") == 3 || word.lastIndexOf("T") == 3){
+                textField04.setText("T");
+            } if (word.indexOf("T") == 4 || word.lastIndexOf("T") == 4){
+                textField05.setText("T");
+            } if (word.indexOf("T") == 5 || word.lastIndexOf("T") == 5){
+                textField06.setText("T");
+            }
+        } else {
+            tButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_tButtonActionPerformed
+
+    private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
+        if (word.contains("D")){
+            dButton.setBackground(Color.green);
+            if (word.indexOf("D") == 0 || word.lastIndexOf("D") == 0){
+                textField01.setText("D");
+            } if (word.indexOf("D") == 1 || word.lastIndexOf("D") == 1){
+                textField02.setText("D");
+            } if (word.indexOf("D") == 2 || word.lastIndexOf("D") == 2){
+                textField03.setText("D");
+            } if (word.indexOf("D") == 3 || word.lastIndexOf("D") == 3){
+                textField04.setText("A");
+            } if (word.indexOf("D") == 4 || word.lastIndexOf("D") == 4){
+                textField05.setText("D");
+            } if (word.indexOf("D") == 5 || word.lastIndexOf("D") == 5){
+                textField06.setText("D");
+            }
+        } else {
+            dButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_dButtonActionPerformed
+
+    private void xButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_xButtonActionPerformed
+        if (word.contains("X")){
+            xButton.setBackground(Color.green);
+            if (word.indexOf("X") == 0 || word.lastIndexOf("X") == 0){
+                textField01.setText("X");
+            } if (word.indexOf("X") == 1 || word.lastIndexOf("X") == 1){
+                textField02.setText("X");
+            } if (word.indexOf("X") == 2 || word.lastIndexOf("X") == 2){
+                textField03.setText("X");
+            } if (word.indexOf("X") == 3 || word.lastIndexOf("X") == 3){
+                textField04.setText("X");
+            } if (word.indexOf("X") == 4 || word.lastIndexOf("X") == 4){
+                textField05.setText("X");
+            } if (word.indexOf("X") == 5 || word.lastIndexOf("X") == 5){
+                textField06.setText("X");
+            }
+        } else {
+            xButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_xButtonActionPerformed
+
+    private void oButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oButtonActionPerformed
+        if (word.contains("O")){
+            oButton.setBackground(Color.green);
+            if (word.indexOf("O") == 0 || word.lastIndexOf("O") == 0){
+                textField01.setText("O");
+            } if (word.indexOf("O") == 1 || word.lastIndexOf("O") == 1){
+                textField02.setText("O");
+            } if (word.indexOf("O") == 2 || word.lastIndexOf("O") == 2){
+                textField03.setText("O");
+            } if (word.indexOf("O") == 3 || word.lastIndexOf("O") == 3){
+                textField04.setText("O");
+            } if (word.indexOf("O") == 4 || word.lastIndexOf("O") == 4){
+                textField05.setText("O");
+            } if (word.indexOf("O") == 5 || word.lastIndexOf("O") == 5){
+                textField06.setText("O");
+            }
+        } else {
+            oButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_oButtonActionPerformed
+
+    private void pButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pButtonActionPerformed
+        if (word.contains("P")){
+            pButton.setBackground(Color.green);
+            if (word.indexOf("P") == 0 || word.lastIndexOf("P") == 0){
+                textField01.setText("P");
+            } if (word.indexOf("P") == 1 || word.lastIndexOf("P") == 1){
+                textField02.setText("P");
+            } if (word.indexOf("P") == 2 || word.lastIndexOf("P") == 2){
+                textField03.setText("P");
+            } if (word.indexOf("P") == 3 || word.lastIndexOf("P") == 3){
+                textField04.setText("P");
+            } if (word.indexOf("P") == 4 || word.lastIndexOf("P") == 4){
+                textField05.setText("P");
+            } if (word.indexOf("P") == 5 || word.lastIndexOf("P") == 5){
+                textField06.setText("P");
+            }
+        } else {
+            pButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_pButtonActionPerformed
+
+    private void nButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nButtonActionPerformed
+        if (word.contains("N")){
+            nButton.setBackground(Color.green);
+            if (word.indexOf("N") == 0 || word.lastIndexOf("N") == 0){
+                textField01.setText("N");
+            } if (word.indexOf("N") == 1 || word.lastIndexOf("N") == 1){
+                textField02.setText("N");
+            } if (word.indexOf("N") == 2 || word.lastIndexOf("N") == 2){
+                textField03.setText("N");
+            } if (word.indexOf("N") == 3 || word.lastIndexOf("N") == 3){
+                textField04.setText("N");
+            } if (word.indexOf("N") == 4 || word.lastIndexOf("N") == 4){
+                textField05.setText("N");
+            } if (word.indexOf("N") == 5 || word.lastIndexOf("N") == 5){
+                textField06.setText("N");
+            }
+        } else {
+            nButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_nButtonActionPerformed
+
+    private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
+        if (word.contains("B")){
+            bButton.setBackground(Color.green);
+            if (word.indexOf("B") == 0 || word.lastIndexOf("B") == 0){
+                textField01.setText("B");
+            } if (word.indexOf("B") == 1 || word.lastIndexOf("B") == 1){
+                textField02.setText("B");
+            } if (word.indexOf("B") == 2 || word.lastIndexOf("B") == 2){
+                textField03.setText("B");
+            } if (word.indexOf("B") == 3 || word.lastIndexOf("B") == 3){
+                textField04.setText("B");
+            } if (word.indexOf("B") == 4 || word.lastIndexOf("B") == 4){
+                textField05.setText("B");
+            } if (word.indexOf("B") == 5 || word.lastIndexOf("B") == 5){
+                textField06.setText("B");
+            }
+        } else {
+            bButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_bButtonActionPerformed
+
+    private void lButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lButtonActionPerformed
+        if (word.contains("L")){
+            lButton.setBackground(Color.green);
+            if (word.indexOf("L") == 0 || word.lastIndexOf("L") == 0){
+                textField01.setText("L");
+            } if (word.indexOf("L") == 1 || word.lastIndexOf("L") == 1){
+                textField02.setText("L");
+            } if (word.indexOf("L") == 2 || word.lastIndexOf("L") == 2){
+                textField03.setText("L");
+            } if (word.indexOf("L") == 3 || word.lastIndexOf("L") == 3){
+                textField04.setText("L");
+            } if (word.indexOf("L") == 4 || word.lastIndexOf("L") == 4){
+                textField05.setText("L");
+            } if (word.indexOf("L") == 5 || word.lastIndexOf("L") == 5){
+                textField06.setText("L");
+            }
+        } else {
+            lButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_lButtonActionPerformed
+
+    private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
+        if (word.contains("F")){
+            fButton.setBackground(Color.green);
+            if (word.indexOf("F") == 0 || word.lastIndexOf("F") == 0){
+                textField01.setText("F");
+            } if (word.indexOf("F") == 1 || word.lastIndexOf("F") == 1){
+                textField02.setText("F");
+            } if (word.indexOf("F") == 2 || word.lastIndexOf("F") == 2){
+                textField03.setText("F");
+            } if (word.indexOf("F") == 3 || word.lastIndexOf("F") == 3){
+                textField04.setText("F");
+            } if (word.indexOf("F") == 4 || word.lastIndexOf("F") == 4){
+                textField05.setText("F");
+            } if (word.indexOf("F") == 5 || word.lastIndexOf("F") == 5){
+                textField06.setText("F");
+            }
+        } else {
+            fButton.setBackground(Color.red);
+            mistakes += 1;
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+
+        }
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_fButtonActionPerformed
+
+    private void gButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButtonActionPerformed
+        if (word.contains("G")){
+            gButton.setBackground(Color.green);
+            if (word.indexOf("G") == 0 || word.lastIndexOf("G") == 0){
+                textField01.setText("G");
+            } if (word.indexOf("G") == 1 || word.lastIndexOf("G") == 1){
+                textField02.setText("G");
+            } if (word.indexOf("G") == 2 || word.lastIndexOf("G") == 2){
+                textField03.setText("G");
+            } if (word.indexOf("G") == 3 || word.lastIndexOf("G") == 3){
+                textField04.setText("G");
+            } if (word.indexOf("G") == 4 || word.lastIndexOf("G") == 4){
+                textField05.setText("G");
+            } if (word.indexOf("G") == 5 || word.lastIndexOf("G") == 5){
+                textField06.setText("G");
+            }
+        } else {
+            gButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_gButtonActionPerformed
+
+    private void eButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eButtonActionPerformed
+        if (word.contains("E")){
+            eButton.setBackground(Color.green);
+            if (word.indexOf("E") == 0 || word.lastIndexOf("E") == 0){
+                textField01.setText("E");
+            } if (word.indexOf("E") == 1 || word.lastIndexOf("E") == 1){
+                textField02.setText("E");
+            } if (word.indexOf("E") == 2 || word.lastIndexOf("E") == 2){
+                textField03.setText("E");
+            } if (word.indexOf("E") == 3 || word.lastIndexOf("E") == 3){
+                textField04.setText("E");
+            } if (word.indexOf("E") == 4 || word.lastIndexOf("E") == 4){
+                textField05.setText("E");
+            } if (word.indexOf("E") == 5 || word.lastIndexOf("E") == 5){
+                textField06.setText("E");
+            }
+        } else {
+            eButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_eButtonActionPerformed
+
+    private void rButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonActionPerformed
+        if (word.contains("R")){
+            rButton.setBackground(Color.green);
+            if (word.indexOf("R") == 0 || word.lastIndexOf("R") == 0){
+                textField01.setText("R");
+            } if (word.indexOf("R") == 1 || word.lastIndexOf("R") == 1){
+                textField02.setText("R");
+            } if (word.indexOf("R") == 2 || word.lastIndexOf("R") == 2){
+                textField03.setText("R");
+            } if (word.indexOf("R") == 3 || word.lastIndexOf("R") == 3){
+                textField04.setText("R");
+            } if (word.indexOf("R") == 4 || word.lastIndexOf("R") == 4){
+                textField05.setText("R");
+            } if (word.indexOf("R") == 5 || word.lastIndexOf("R") == 5){
+                textField06.setText("R");
+            }
+        } else {
+            rButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_rButtonActionPerformed
+
+    private void hButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hButtonActionPerformed
+        if (word.contains("H")){
+            hButton.setBackground(Color.green);
+            if (word.indexOf("H") == 0 || word.lastIndexOf("H") == 0){
+                textField01.setText("H");
+            } if (word.indexOf("H") == 1 || word.lastIndexOf("H") == 1){
+                textField02.setText("H");
+            } if (word.indexOf("H") == 2 || word.lastIndexOf("H") == 2){
+                textField03.setText("H");
+            } if (word.indexOf("H") == 3 || word.lastIndexOf("H") == 3){
+                textField04.setText("H");
+            } if (word.indexOf("H") == 4 || word.lastIndexOf("H") == 4){
+                textField05.setText("H");
+            } if (word.indexOf("H") == 5 || word.lastIndexOf("H") == 5){
+                textField06.setText("H");
+            }
+        } else {
+            hButton.setBackground(Color.red);
+            mistakes += 1;
+
+            if (mistakes <= maxMistakes){
+                mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
+            } else {
+                System.out.print("YOU LOSE");
+            }
+        }
+
+        if (wordLength == 3){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 4){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 5){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        } else if (wordLength == 6){
+            if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
+                System.out.print("You WIN!!!");
+            }
+        }
+    }//GEN-LAST:event_hButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1853,6 +1862,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private javax.swing.JButton hButton;
     private javax.swing.JButton iButton;
     private javax.swing.JButton jButton;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton kButton;
