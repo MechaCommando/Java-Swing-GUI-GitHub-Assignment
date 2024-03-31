@@ -16,7 +16,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
     
     public static String word = "CAMERA";
     public static int mistakes = 0;
-    public static int maxMistakes = 7;
+    public static int maxMistakes = 6;
     public int wordLength = 6;
     //public static List<String> letters = new ArrayList<>();
     //mistakeCounterLabel.setText("Mistakes: " + (String)mistakes);
@@ -328,7 +328,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addComponent(yButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(zButton)))
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -368,7 +368,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(xButton)
                     .addComponent(yButton)
                     .addComponent(zButton))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -409,7 +409,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/1000_F_517383341_8nWEFfM1KL3K5LNTjUDrne3x0kZiuxuj.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image01.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -480,7 +480,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -511,7 +511,42 @@ public class mainHangmanUI extends javax.swing.JFrame {
     }//GEN-LAST:event_backButtonActionPerformed
 
     private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image01.jpg")));
         wordLength = WordLengthSlider.getValue();
+        switch (WordLengthSlider.getValue()){
+            case 3:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.hide();
+            textField05.hide();
+            textField06.hide();
+            break;
+            case 4:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.show();
+            textField05.hide();
+            textField06.hide();
+            break;
+            case 5:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.show();
+            textField05.show();
+            textField06.hide();
+            break;
+            case 6:
+            textField01.show();
+            textField02.show();
+            textField03.show();
+            textField04.show();
+            textField05.show();
+            textField06.show();
+            break;
+        }
         mistakes = 0;
         mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
         textField01.setText("");
@@ -571,40 +606,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
 
     private void WordLengthSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_WordLengthSliderStateChanged
         WordLengthLabel.setText("Word Length: " + String.valueOf(WordLengthSlider.getValue()));
-        switch (WordLengthSlider.getValue()){
-            case 3:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.hide();
-            textField05.hide();
-            textField06.hide();
-            break;
-            case 4:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.show();
-            textField05.hide();
-            textField06.hide();
-            break;
-            case 5:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.show();
-            textField05.show();
-            textField06.hide();
-            break;
-            case 6:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.show();
-            textField05.show();
-            textField06.show();
-            break;
-        }
     }//GEN-LAST:event_WordLengthSliderStateChanged
 
     private void uButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uButtonActionPerformed
@@ -633,6 +634,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("YOU LOSE");
             }
         }
+        
         if (wordLength == 3){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
                 System.out.print("You WIN!!!");
@@ -649,6 +651,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+        if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
 
     }//GEN-LAST:event_uButtonActionPerformed
@@ -697,6 +713,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_yButtonActionPerformed
 
     private void zButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zButtonActionPerformed
@@ -742,6 +772,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_zButtonActionPerformed
 
@@ -789,6 +833,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_iButtonActionPerformed
 
     private void kButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kButtonActionPerformed
@@ -834,6 +892,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_kButtonActionPerformed
 
@@ -881,6 +953,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_cButtonActionPerformed
 
     private void aButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aButtonActionPerformed
@@ -926,6 +1012,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+        if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_aButtonActionPerformed
 
@@ -973,6 +1073,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+        if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_wButtonActionPerformed
 
     private void jButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActionPerformed
@@ -1018,6 +1132,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_jButtonActionPerformed
 
@@ -1065,6 +1193,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_vButtonActionPerformed
 
     private void sButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sButtonActionPerformed
@@ -1110,6 +1252,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_sButtonActionPerformed
 
@@ -1157,6 +1313,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_qButtonActionPerformed
 
     private void mButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mButtonActionPerformed
@@ -1202,6 +1372,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
 
     }//GEN-LAST:event_mButtonActionPerformed
@@ -1250,6 +1434,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_tButtonActionPerformed
 
     private void dButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dButtonActionPerformed
@@ -1295,6 +1493,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_dButtonActionPerformed
 
@@ -1342,6 +1554,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_xButtonActionPerformed
 
     private void oButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oButtonActionPerformed
@@ -1388,6 +1614,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_oButtonActionPerformed
 
     private void pButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pButtonActionPerformed
@@ -1432,6 +1672,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_pButtonActionPerformed
 
@@ -1479,6 +1733,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_nButtonActionPerformed
 
     private void bButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bButtonActionPerformed
@@ -1524,6 +1792,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_bButtonActionPerformed
 
@@ -1571,6 +1853,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_lButtonActionPerformed
 
     private void fButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fButtonActionPerformed
@@ -1615,6 +1911,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_fButtonActionPerformed
 
@@ -1662,6 +1972,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_gButtonActionPerformed
 
     private void eButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eButtonActionPerformed
@@ -1708,6 +2032,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 System.out.print("You WIN!!!");
             }
         }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
+        }
     }//GEN-LAST:event_eButtonActionPerformed
 
     private void rButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rButtonActionPerformed
@@ -1752,6 +2090,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_rButtonActionPerformed
 
@@ -1798,6 +2150,20 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
                 System.out.print("You WIN!!!");
             }
+        }
+        
+                if (mistakes == 1){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image02.jpg")));
+        } else if (mistakes == 2){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image03.jpg")));
+        } else if (mistakes == 3){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image04.jpg")));
+        } else if (mistakes == 4){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image05.jpg")));
+        } else if (mistakes == 5){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image06.jpg")));
+        } else if (mistakes == 6){
+            jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/hangManIMGSmallerThree.jpg")));
         }
     }//GEN-LAST:event_hButtonActionPerformed
 
