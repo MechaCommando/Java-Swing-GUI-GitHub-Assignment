@@ -515,36 +515,36 @@ public class mainHangmanUI extends javax.swing.JFrame {
         wordLength = WordLengthSlider.getValue();
         switch (WordLengthSlider.getValue()){
             case 3:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.hide();
-            textField05.hide();
-            textField06.hide();
+            textField01.setVisible(true);
+            textField02.setVisible(true);
+            textField03.setVisible(true);
+            textField04.setVisible(false);
+            textField05.setVisible(false);
+            textField06.setVisible(false);
             break;
             case 4:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.show();
-            textField05.hide();
-            textField06.hide();
+            textField01.setVisible(true);
+            textField02.setVisible(true);
+            textField03.setVisible(true);
+            textField04.setVisible(true);
+            textField05.setVisible(false);
+            textField06.setVisible(false);
             break;
             case 5:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.show();
-            textField05.show();
-            textField06.hide();
+            textField01.setVisible(true);
+            textField02.setVisible(true);
+            textField03.setVisible(true);
+            textField04.setVisible(true);
+            textField05.setVisible(true);
+            textField06.setVisible(false);
             break;
             case 6:
-            textField01.show();
-            textField02.show();
-            textField03.show();
-            textField04.show();
-            textField05.show();
-            textField06.show();
+            textField01.setVisible(true);
+            textField02.setVisible(true);
+            textField03.setVisible(true);
+            textField04.setVisible(true);
+            textField05.setVisible(true);
+            textField06.setVisible(true);
             break;
         }
         mistakes = 0;
