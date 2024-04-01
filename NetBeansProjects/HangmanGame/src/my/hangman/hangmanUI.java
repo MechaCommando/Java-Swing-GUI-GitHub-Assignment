@@ -4,6 +4,11 @@
  */
 package my.hangman;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import static my.hangman.mainHangmanUI.word;
+
 /**
  *
  * @author hatam1
@@ -97,6 +102,12 @@ public class hangmanUI extends javax.swing.JFrame {
         newframe.setVisible(true);
         newframe.toFront();  
         dispose();// to Main page
+        Random rand1 = new Random();
+        int randChoice1 = rand1.nextInt(6);
+        List<String> sixLetterWords1 = Arrays.asList("BABOON", "HACKER", "VACCUM", "CHANCE", "DAMAGE");
+        String wordz1 = sixLetterWords1.get(randChoice1);
+        mainHangmanUI.word = wordz1;
+        mainHangmanUI.mistakes = 0;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
