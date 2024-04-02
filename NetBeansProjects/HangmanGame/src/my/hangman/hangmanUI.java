@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.hangman;
+import javax.swing.*;
 
 /**
  *
@@ -15,7 +16,9 @@ public class hangmanUI extends javax.swing.JFrame {
      */
     public hangmanUI() {
         initComponents();
-    }        
+    }   
+    
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,6 +33,8 @@ public class hangmanUI extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -46,16 +51,19 @@ public class hangmanUI extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(238, 86, 0));
         jButton1.setText("START");
         jButton1.setActionCommand("START ");
-        jButton1.setOpaque(true);
+        jButton1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 170, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 170, 40));
 
+        jButton2.setFont(new java.awt.Font("Bernard MT Condensed", 0, 24)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(102, 0, 0));
         jButton2.setText("GUIDE");
         jButton2.setAlignmentY(0.0F);
+        jButton2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton2MouseClicked(evt);
@@ -66,12 +74,33 @@ public class hangmanUI extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 99, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 170, 40));
 
         jLabel1.setFont(new java.awt.Font("Bernard MT Condensed", 0, 100)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("HANGMAN");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
+
+        jTextField1.setFont(new java.awt.Font("Algerian", 0, 12)); // NOI18N
+        jTextField1.setText("Please enter your User Name!");
+        jTextField1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
+
+        jButton3.setBackground(new java.awt.Color(255, 102, 51));
+        jButton3.setFont(new java.awt.Font("Algerian", 0, 12)); // NOI18N
+        jButton3.setText("Save");
+        jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 200, 40, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/HD-wallpaper-welcome-to-el-paso-shadows-painted-old-west-cowboys.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -102,6 +131,17 @@ public class hangmanUI extends javax.swing.JFrame {
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
                 // TODO add your handling code here:
     }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        String username = jTextField1.getText();  
+        hangmanScoreboard.addToScoreboard(username);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        String username = jTextField1.getText();
+        hangmanScoreboard.addToScoreboard(username);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,9 +181,11 @@ public class hangmanUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private void close() {
