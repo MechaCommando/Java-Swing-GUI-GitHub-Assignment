@@ -63,6 +63,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
         if (wordLength == 3){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
                 System.out.print("You WIN!!!");
+                hangmanScoreboard.addToScoreboard(hangmanUI.getUsername() + " " + String.valueOf(mistakes));
             }
         } else if (wordLength == 4){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
@@ -471,7 +472,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image01.jpg"))); // NOI18N
 
-        jButton1.setText("jButton1");
+        jButton1.setText("Scoreboard");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

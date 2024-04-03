@@ -47,7 +47,7 @@ public class hangmanGuide extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 95, 38));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 60, 95, 38));
         jButton1.getAccessibleContext().setAccessibleName("Okay");
 
         jScrollPane1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 5));
@@ -58,7 +58,7 @@ public class hangmanGuide extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Algerian", 0, 12)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("        \n        I. The player will have to guess a word based on the number \n                                         and order of blank underlines.\n\n        II.  For each letter guessed wrong a part of a stick figure \n                                      will be added to a hanging noose. \n\n       III. If all letters of the word is guess correctly before the \n                                image is complete then the player wins\n");
+        jTextArea1.setText("        \n        I. The player will have to guess a word based on the number \n                                         and order of blank text boxes.\n\n        II.  For each letter guessed wrong a part of a stick figure \n                                      will be added to a hanging noose. \n\n       III. If all letters of the word is guess correctly before the \n                                image is complete then the player wins\n");
         jTextArea1.setAutoscrolls(false);
         jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jScrollPane1.setViewportView(jTextArea1);
@@ -71,15 +71,14 @@ public class hangmanGuide extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel6.setText("RULES");
         jLabel6.setOpaque(true);
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 250, 80));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 250, 80));
 
         jLabel3.setBackground(new java.awt.Color(203, 161, 101));
         jLabel3.setOpaque(true);
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 220, 70));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, 220, 70));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/wanted bg.jpg"))); // NOI18N
-        jLabel5.setText("jLabel5");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 300));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 606, 388));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

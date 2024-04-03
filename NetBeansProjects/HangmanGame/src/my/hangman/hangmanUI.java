@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Random;
 import static my.hangman.mainHangmanUI.word;
 
+
+
 /**
  *
  * @author hatam1
@@ -23,7 +25,7 @@ public class hangmanUI extends javax.swing.JFrame {
         initComponents();
     }   
     
-    
+    public static String user_name = "";
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -117,9 +119,6 @@ public class hangmanUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        hangmanGuide pi = new hangmanGuide();
-        pi.show();
-        dispose();
         hangmanGuide newframe = new hangmanGuide();
         newframe.setVisible(true);
         newframe.toFront();
@@ -145,6 +144,7 @@ public class hangmanUI extends javax.swing.JFrame {
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         String username = jTextField1.getText();  
+        user_name = username;
         hangmanScoreboard.addToScoreboard(username);
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -154,6 +154,10 @@ public class hangmanUI extends javax.swing.JFrame {
         hangmanScoreboard.addToScoreboard(username);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    
+    public static String getUsername(){
+        return user_name;
+    }
     /**
      * @param args the command line arguments
      */
