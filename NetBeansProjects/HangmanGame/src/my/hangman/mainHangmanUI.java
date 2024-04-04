@@ -56,26 +56,41 @@ public class mainHangmanUI extends javax.swing.JFrame {
             if (mistakes <= maxMistakes){
                 mistakeCounterLabel.setText("Mistakes: " + String.valueOf(mistakes));
             } else {
-                System.out.print("YOU LOSE");
+                GameOverScreen newframe = new GameOverScreen();
+                newframe.setVisible(true);
+                newframe.toFront();
+                dispose();// to Main page
             }
         }
         
         if (wordLength == 3){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("")){
-                System.out.print("You WIN!!!");
+                YouWinScreen newframe = new YouWinScreen();
+                newframe.setVisible(true);
+                newframe.toFront();
+                dispose();// to Main page
                 hangmanScoreboard.addToScoreboard(hangmanUI.getUsername() + " " + String.valueOf(mistakes));
             }
         } else if (wordLength == 4){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
-                System.out.print("You WIN!!!");
+                YouWinScreen newframe = new YouWinScreen();
+                newframe.setVisible(true);
+                newframe.toFront();
+                dispose();// to Main page
             }
         } else if (wordLength == 5){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("")){
-                System.out.print("You WIN!!!");
+                YouWinScreen newframe = new YouWinScreen();
+                newframe.setVisible(true);
+                newframe.toFront();
+                dispose();// to Main page
             }
         } else if (wordLength == 6){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("") && !textField05.getText().equals("") && !textField06.getText().equals("")){
-                System.out.print("You WIN!!!");
+                YouWinScreen newframe = new YouWinScreen();
+                newframe.setVisible(true);
+                newframe.toFront();
+                dispose();// to Main page
             }
         }
         
@@ -137,7 +152,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
         resetButton = new javax.swing.JButton();
         backButton = new javax.swing.JToggleButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -389,7 +403,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                         .addComponent(yButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(zButton)))
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -429,7 +443,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                     .addComponent(xButton)
                     .addComponent(yButton)
                     .addComponent(zButton))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {aButton, bButton, cButton, dButton, eButton, fButton, gButton, hButton, iButton, jButton, kButton, lButton, mButton, nButton, oButton, pButton, qButton, rButton, sButton, tButton, uButton, vButton, wButton, xButton, yButton, zButton});
@@ -472,13 +486,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/image01.jpg"))); // NOI18N
 
-        jButton1.setText("Scoreboard");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -493,27 +500,22 @@ public class mainHangmanUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
+                                .addGap(169, 169, 169)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(169, 169, 169)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                                .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jButton1))))))
+                                        .addComponent(textField01, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField02, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField03, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(WordLengthSlider, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(mistakeCounterLabel)
@@ -547,8 +549,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
                             .addComponent(textField04, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textField05, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(textField06, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(14, 14, 14)
-                        .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -577,7 +577,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 .addGap(44, 44, 44))
         );
 
-        pack();
+        setSize(new java.awt.Dimension(622, 396));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
@@ -787,13 +788,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
         buttonAction("H", hButton);
     }//GEN-LAST:event_hButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        hangmanScoreboard newframe = new hangmanScoreboard();
-        newframe.setVisible(true);
-        newframe.toFront();
-        dispose();        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -842,7 +836,6 @@ public class mainHangmanUI extends javax.swing.JFrame {
     private javax.swing.JButton hButton;
     private javax.swing.JButton iButton;
     private javax.swing.JButton jButton;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

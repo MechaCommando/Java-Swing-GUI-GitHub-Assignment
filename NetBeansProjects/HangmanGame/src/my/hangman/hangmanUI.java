@@ -8,7 +8,7 @@ import javax.swing.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import static my.hangman.mainHangmanUI.word;
+import my.hangman.mainHangmanUI;
 
 
 
@@ -64,7 +64,7 @@ public class hangmanUI extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 170, 40));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 170, 40));
 
         jButton2.setFont(new java.awt.Font("Bernard MT Condensed", 0, 24)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 0, 0));
@@ -81,12 +81,12 @@ public class hangmanUI extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 230, 170, 40));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 170, 40));
 
         jLabel1.setFont(new java.awt.Font("Bernard MT Condensed", 0, 100)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("HANGMAN");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, -1, -1));
 
         jTextField1.setFont(new java.awt.Font("Algerian", 0, 12)); // NOI18N
         jTextField1.setText("Please enter your User Name!");
@@ -96,7 +96,7 @@ public class hangmanUI extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 102, 51));
         jButton3.setFont(new java.awt.Font("Algerian", 0, 12)); // NOI18N
@@ -107,7 +107,7 @@ public class hangmanUI extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 200, 40, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 40, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/HD-wallpaper-welcome-to-el-paso-shadows-painted-old-west-cowboys.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -115,7 +115,8 @@ public class hangmanUI extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 44, -1, -1));
 
-        pack();
+        setSize(new java.awt.Dimension(663, 422));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -131,7 +132,7 @@ public class hangmanUI extends javax.swing.JFrame {
         newframe.toFront();  
         dispose();// to Main page
         Random rand1 = new Random();
-        int randChoice1 = rand1.nextInt(6);
+        int randChoice1 = rand1.nextInt(5);
         List<String> sixLetterWords1 = Arrays.asList("BABOON", "HACKER", "VACCUM", "CHANCE", "DAMAGE");
         String wordz1 = sixLetterWords1.get(randChoice1);
         mainHangmanUI.word = wordz1;
@@ -204,6 +205,6 @@ public class hangmanUI extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void close() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }
