@@ -31,13 +31,15 @@ public class hangmanScoreboard extends javax.swing.JFrame {
             } else {
                 nameList.add("Anonymous");
             }
-            
             nameList.add(String.valueOf(mainHangmanUI.mistakes));
+            
             if (nameList.size() == 2){
                 jLabel1.setText(nameList.get(0));
                 jLabel2.setText(nameList.get(1));
             } else if (nameList.size() == 4){
-                if (Integer.valueOf(nameList.get(1)) < Integer.valueOf(nameList.get(3))){
+                int num1 = Integer.valueOf(nameList.get(1));
+                int num2 = Integer.valueOf(nameList.get(3));
+                if (num1 < num2){
                     jLabel1.setText(nameList.get(0));
                     jLabel2.setText(nameList.get(1));
                     jLabel3.setText(nameList.get(2));
@@ -49,12 +51,52 @@ public class hangmanScoreboard extends javax.swing.JFrame {
                     jLabel4.setText(nameList.get(1)); 
                 }
             } else if (nameList.size() == 6){
-                jLabel1.setText(nameList.get(0));
-                jLabel2.setText(nameList.get(1));
-                jLabel3.setText(nameList.get(2));
-                jLabel4.setText(nameList.get(3)); 
-                jLabel5.setText(nameList.get(4));
-                jLabel6.setText(nameList.get(5));  
+                int num1 = Integer.valueOf(nameList.get(1));
+                int num2 = Integer.valueOf(nameList.get(3));
+                int num3 = Integer.valueOf(nameList.get(5));
+                if (num1 < num2 && num1 < num3){
+                    jLabel1.setText(nameList.get(0));
+                    jLabel2.setText(nameList.get(1));
+                    if (num2 < num3){
+                        jLabel3.setText(nameList.get(2));
+                        jLabel4.setText(nameList.get(3)); 
+                        jLabel5.setText(nameList.get(4));
+                        jLabel6.setText(nameList.get(5));  
+                    } else if (num3 < num2){
+                        jLabel3.setText(nameList.get(4));
+                        jLabel4.setText(nameList.get(5)); 
+                        jLabel5.setText(nameList.get(2));
+                        jLabel6.setText(nameList.get(3));  
+                    }
+                } else if (num2 < num1 && num2 < num3){
+                    jLabel1.setText(nameList.get(2));
+                    jLabel2.setText(nameList.get(3));
+                    if (num1 < num3){
+                        jLabel3.setText(nameList.get(0));
+                        jLabel4.setText(nameList.get(1)); 
+                        jLabel5.setText(nameList.get(4));
+                        jLabel6.setText(nameList.get(5)); 
+                    } else if (num3 < num1){
+                        jLabel3.setText(nameList.get(4));
+                        jLabel4.setText(nameList.get(5)); 
+                        jLabel5.setText(nameList.get(0));
+                        jLabel6.setText(nameList.get(1)); 
+                    }
+                } else if (num3 < num1 && num3 < num2){
+                    jLabel1.setText(nameList.get(4));
+                    jLabel2.setText(nameList.get(5));
+                    if (num1 < num2){
+                        jLabel3.setText(nameList.get(0));
+                        jLabel4.setText(nameList.get(1)); 
+                        jLabel5.setText(nameList.get(2));
+                        jLabel6.setText(nameList.get(3)); 
+                    } else if (num2 < num1){
+                        jLabel3.setText(nameList.get(2));
+                        jLabel4.setText(nameList.get(3)); 
+                        jLabel5.setText(nameList.get(0));
+                        jLabel6.setText(nameList.get(1)); 
+                    }
+                }
             }
             
 
