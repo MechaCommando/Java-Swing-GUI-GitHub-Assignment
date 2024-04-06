@@ -37,19 +37,25 @@ public class hangmanScoreboard extends javax.swing.JFrame {
                 jLabel1.setText(nameList.get(0));
                 jLabel2.setText(nameList.get(1));
             } else if (nameList.size() == 4){
-                jLabel1.setText(nameList.get(0));
-                jLabel2.setText(nameList.get(1));
-                jLabel3.setText(nameList.get(2));
-                jLabel4.setText(nameList.get(3)); 
+                if (Integer.valueOf(nameList.get(1)) < Integer.valueOf(nameList.get(3))){
+                    jLabel1.setText(nameList.get(0));
+                    jLabel2.setText(nameList.get(1));
+                    jLabel3.setText(nameList.get(2));
+                    jLabel4.setText(nameList.get(3)); 
+                } else {
+                    jLabel1.setText(nameList.get(2));
+                    jLabel2.setText(nameList.get(3));
+                    jLabel3.setText(nameList.get(0));
+                    jLabel4.setText(nameList.get(1)); 
+                }
             } else if (nameList.size() == 6){
                 jLabel1.setText(nameList.get(0));
                 jLabel2.setText(nameList.get(1));
                 jLabel3.setText(nameList.get(2));
                 jLabel4.setText(nameList.get(3)); 
                 jLabel5.setText(nameList.get(4));
-                jLabel6.setText(nameList.get(5)); 
+                jLabel6.setText(nameList.get(5));  
             }
-            System.out.println(nameList);
             
 
         }
