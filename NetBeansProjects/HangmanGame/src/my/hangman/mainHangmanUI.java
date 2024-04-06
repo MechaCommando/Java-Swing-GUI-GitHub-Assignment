@@ -16,6 +16,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
     public static int mistakes = 0;
     public static int maxMistakes = 6;
     public int wordLength = 6;
+    public static String winnerName = "BLANK";
     /**
      * Creates new form mainHangmanUI
      */
@@ -69,7 +70,7 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 newframe.setVisible(true);
                 newframe.toFront();
                 dispose();// to Main page
-                hangmanScoreboard.addToScoreboard(hangmanUI.getUsername() + " " + String.valueOf(mistakes));
+                
             }
         } else if (wordLength == 4){
             if (!textField01.getText().equals("") && !textField02.getText().equals("") && !textField03.getText().equals("") && !textField04.getText().equals("")){
@@ -91,6 +92,8 @@ public class mainHangmanUI extends javax.swing.JFrame {
                 newframe.setVisible(true);
                 newframe.toFront();
                 dispose();// to Main page
+                winnerName = "HAYTHAM";
+                System.out.println("SUCCESS01");
             }
         }
         

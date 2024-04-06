@@ -18,14 +18,13 @@ import my.hangman.mainHangmanUI;
  */
 public class hangmanUI extends javax.swing.JFrame {
 
+    public static String userName = "EMPTY";
     /**
      * Creates new form hangmanUI
      */
     public hangmanUI() {
         initComponents();
     }   
-    
-    public static String user_name = "";
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,6 +41,8 @@ public class hangmanUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -109,13 +110,31 @@ public class hangmanUI extends javax.swing.JFrame {
         });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 40, -1));
 
+        jButton5.setFont(new java.awt.Font("Nirmala UI", 1, 12)); // NOI18N
+        jButton5.setText("QUIT");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
+
+        jButton4.setText("INFO");
+        jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 40, -1));
+
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/my/hangman/HD-wallpaper-welcome-to-el-paso-shadows-painted-old-west-cowboys.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 300));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 44, -1, -1));
 
-        setSize(new java.awt.Dimension(663, 422));
+        setSize(new java.awt.Dimension(660, 422));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -144,21 +163,25 @@ public class hangmanUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        String username = jTextField1.getText();  
-        user_name = username;
-        hangmanScoreboard.addToScoreboard(username);
+
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        String username = jTextField1.getText();
-        hangmanScoreboard.addToScoreboard(username);        // TODO add your handling code here:
+        userName = jTextField1.getText();
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    
-    public static String getUsername(){
-        return user_name;
-    }
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        JFrame quitConfirm = new JFrame();
+        if(JOptionPane.showConfirmDialog(quitConfirm, "Are you sure you want to quit?", "QUIT", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION){
+            System.exit(0);
+        }
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        JOptionPane.showMessageDialog(this.jButton4, "MADE BY HAYTHAM, CINDY, AND HARRY");
+    }//GEN-LAST:event_jButton4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -198,6 +221,8 @@ public class hangmanUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

@@ -3,8 +3,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package my.hangman;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.*;
+
+import java.util.Arrays;
+import java.util.*;
+import java.util.Random;
 
 /**
  *
@@ -12,13 +14,46 @@ import javax.swing.*;
  */
 public class hangmanScoreboard extends javax.swing.JFrame {
 
+    public static List<String> nameList = new ArrayList<>();
+    public static int scoreNum = 1;
     /**
      * Creates new form hangmanScoreboard
      */
     public hangmanScoreboard() {
         initComponents();
-        tableModel = new DefaultTableModel();
-        tableModel.addColumn("Username");
+        setTheName();
+    }
+    
+    public static void setTheName(){
+        if (!mainHangmanUI.winnerName.equals("BLANK")){
+            if (!hangmanUI.userName.equals("Please enter your User Name!")){
+                nameList.add(hangmanUI.userName);
+            } else {
+                nameList.add("Anonymous");
+            }
+            
+            nameList.add(String.valueOf(mainHangmanUI.mistakes));
+            if (nameList.size() == 2){
+                jLabel1.setText(nameList.get(0));
+                jLabel2.setText(nameList.get(1));
+            } else if (nameList.size() == 4){
+                jLabel1.setText(nameList.get(0));
+                jLabel2.setText(nameList.get(1));
+                jLabel3.setText(nameList.get(2));
+                jLabel4.setText(nameList.get(3)); 
+            } else if (nameList.size() == 6){
+                jLabel1.setText(nameList.get(0));
+                jLabel2.setText(nameList.get(1));
+                jLabel3.setText(nameList.get(2));
+                jLabel4.setText(nameList.get(3)); 
+                jLabel5.setText(nameList.get(4));
+                jLabel6.setText(nameList.get(5)); 
+            }
+            System.out.println(nameList);
+            
+
+        }
+        
     }
 
     /**
@@ -30,174 +65,134 @@ public class hangmanScoreboard extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        backToGameButton = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        name01 = new javax.swing.JLabel();
-        mistakes01 = new javax.swing.JLabel();
-        name02 = new javax.swing.JLabel();
-        mistakes02 = new javax.swing.JLabel();
-        name03 = new javax.swing.JLabel();
-        mistakes03 = new javax.swing.JLabel();
-        mistakes04 = new javax.swing.JLabel();
-        name04 = new javax.swing.JLabel();
-        name05 = new javax.swing.JLabel();
-        mistakes05 = new javax.swing.JLabel();
-        mistakes06 = new javax.swing.JLabel();
-        name06 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        backToMain = new javax.swing.JButton();
+        backToGame = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(606, 388));
+        setResizable(false);
 
-        jButton1.setText("BACK TO MAIN");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jInternalFrame1.setTitle("NAME                           MISTAKES");
+        jInternalFrame1.setVisible(true);
 
-        backToGameButton.setText("BACK TO GAME");
-        backToGameButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backToGameButtonActionPerformed(evt);
-            }
-        });
+        jLabel1.setText("-");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jLabel2.setText("-");
 
-        jLabel1.setText("USERNAME");
+        jLabel3.setText("-");
 
-        jLabel2.setText("MISTAKES");
+        jLabel4.setText("-");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jLabel5.setText("-");
+
+        jLabel6.setText("-");
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(name01)
-                    .addComponent(name02)
-                    .addComponent(name03)
-                    .addComponent(name04)
-                    .addComponent(name05)
-                    .addComponent(name06))
-                .addGap(72, 72, 72)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mistakes01)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
                     .addComponent(jLabel2)
-                    .addComponent(mistakes02)
-                    .addComponent(mistakes03)
-                    .addComponent(mistakes04)
-                    .addComponent(mistakes05)
-                    .addComponent(mistakes06))
-                .addContainerGap(175, Short.MAX_VALUE))
+                    .addComponent(jLabel6))
+                .addGap(101, 101, 101))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrame1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name01)
-                    .addComponent(mistakes01))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name02)
-                    .addComponent(mistakes02))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name03)
-                    .addComponent(mistakes03))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name04)
-                    .addComponent(mistakes04))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name05)
-                    .addComponent(mistakes05))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(name06)
-                    .addComponent(mistakes06))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel6))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
+
+        backToMain.setText("BACK TO MAIN");
+        backToMain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToMainActionPerformed(evt);
+            }
+        });
+
+        backToGame.setText("BACK TO GAME");
+        backToGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backToGameActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(backToGameButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 253, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(backToGame)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(backToMain)))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jInternalFrame1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(backToGameButton)
-                    .addComponent(jButton1))
-                .addGap(47, 47, 47))
+                    .addComponent(backToMain)
+                    .addComponent(backToGame))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
-        setSize(new java.awt.Dimension(507, 334));
+        setSize(new java.awt.Dimension(387, 337));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-    private static hangmanScoreboard instance;
-    private static DefaultTableModel tableModel;
-    private static JTable scoreboardTable;
-    
-    public static hangmanScoreboard getInstance() {
-        if (instance == null) {
-            instance = new hangmanScoreboard();
-        }
-        return instance;
-    }
-    
-    public static void addToScoreboard(String username) {
-    if (tableModel != null) {
-       tableModel.addRow(new String[]{username});
-    } else {
-        // Initialize the components if not already initialized
-        getInstance().initComponents();
-        // Retry adding the row
-        tableModel.addRow(new String[]{username});
-    }
-}
-   
- 
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        hangmanUI newframe = new hangmanUI();
-        newframe.setVisible(true);
-        newframe.toFront();
-        dispose();
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void backToGameButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToGameButtonActionPerformed
-        mainHangmanUI newframe = new mainHangmanUI();
-        newframe.setVisible(true);
-        newframe.toFront();
+    private void backToGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToGameActionPerformed
+        mainHangmanUI main = new mainHangmanUI();
+        main.setVisible(true);
         dispose();
-    }//GEN-LAST:event_backToGameButtonActionPerformed
+        Random rand1 = new Random();
+        int randChoice1 = rand1.nextInt(5);
+        List<String> sixLetterWords1 = Arrays.asList("BABOON", "HACKER", "VACCUM", "CHANCE", "DAMAGE");
+        String wordz1 = sixLetterWords1.get(randChoice1);
+        mainHangmanUI.word = wordz1;
+        mainHangmanUI.mistakes = 0;
+    }//GEN-LAST:event_backToGameActionPerformed
 
+    private void backToMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backToMainActionPerformed
+        hangmanUI screen = new hangmanUI();
+        screen.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_backToMainActionPerformed
+
+    
     /**
      * @param args the command line arguments
      */
@@ -229,28 +224,19 @@ public class hangmanScoreboard extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new hangmanScoreboard().setVisible(true);
-                
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backToGameButton;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel mistakes01;
-    private javax.swing.JLabel mistakes02;
-    private javax.swing.JLabel mistakes03;
-    private javax.swing.JLabel mistakes04;
-    private javax.swing.JLabel mistakes05;
-    private javax.swing.JLabel mistakes06;
-    private javax.swing.JLabel name01;
-    private javax.swing.JLabel name02;
-    private javax.swing.JLabel name03;
-    private javax.swing.JLabel name04;
-    private javax.swing.JLabel name05;
-    private javax.swing.JLabel name06;
+    private javax.swing.JButton backToGame;
+    private javax.swing.JButton backToMain;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    public static javax.swing.JLabel jLabel1;
+    public static javax.swing.JLabel jLabel2;
+    public static javax.swing.JLabel jLabel3;
+    public static javax.swing.JLabel jLabel4;
+    public static javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel jLabel6;
     // End of variables declaration//GEN-END:variables
 }
